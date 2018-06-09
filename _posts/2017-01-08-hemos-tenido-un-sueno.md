@@ -5,7 +5,7 @@ cover: assets/images/posts/2017-01-08-hemos-tenido-un-sueno/header.jpg
 navigation: True
 title: "Hemos tenido un sueño"
 date: 2017-01-08 12:00:00
-tags: "No Country for Geeks"
+tags: nocountryforgeeks
 class: post-template
 subclass: 'post'
 author: aclopez
