@@ -21,7 +21,7 @@ navigation: True # show the navbar links
 subscribers: False # you need to connect an external service for this to work,
 # if 'True' the submit button is disabled for now, but you can change that
 # by editing `_includes/subscribe-form.html`
-twitter: maktub82 # replace by your username
+twitter: nocountry4geeks # replace by your username
 
 # Disqus
 disqus: True
