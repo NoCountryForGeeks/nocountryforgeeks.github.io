@@ -7,14 +7,14 @@ language: 'es-es'
 # Launch to test: bundle exec jekyll serve -d _site
 
 # Website info
-title: Ikein y yo
+title: No Country for Geeks
 description:
 cover: assets/images/blog/bg.jpg
 logo: assets/images/blog/logo.png
 logo_dark: assets/images/blog/logo.png
 favicon: assets/images/blog/favicon.ico
-production_url: http://www.ikeinyyo.com/
-source_url: https://github.com/ikeinyyo/Ikein-y-yo/
+production_url: http://nocountryforgeeks.com/
+source_url: https://github.com/NoCountryForGeeks/nocountryforgeeks.github.io
 
 # Social info
 navigation: True # show the navbar links
@@ -25,10 +25,10 @@ twitter: maktub82 # replace by your username
 
 # Disqus
 disqus: True
-disqus_shortname: ikeinyyo # replace with your disqus username
+disqus_shortname: nocountry4geeks # replace with your disqus username
 
 # Google Analytics
-google_analytics: UA-97363619-1 # replace with your GA tracking identifier
+google_analytics: UA-103022045-1 # replace with your GA tracking identifier
 
 # edit baseurl to simply '/' if using as your personal page (instead of a project page)
 baseurl: /
@@ -68,13 +68,13 @@ feed:
 # or "master" otherwise
 safe: False
 lsi: False
-username: ikeinyyo
-repo: Ikein-y-yo
+username: nocountryforgeeks
+repo: nocountryforgeeks.github.io
 branch: master
-relative_source: ../ikeinyyo/
-destination: ../Ikein-y-yo/
-production_url:  http://www.ikeinyyo.com/
-source_url:  https://github.com/ikeinyyo/Ikein-y-yo/
+relative_source: ../NoCountryForGeeks/
+destination: ../nocountryforgeeks.github.io/
+production_url:  http://nocountryforgeeks.com/
+source_url:  https://github.com/NoCountryForGeeks/nocountryforgeeks.github.io
 
 
 exclude:
