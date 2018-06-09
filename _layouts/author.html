@@ -13,7 +13,6 @@ logo: 'assets/images/ghost.png'
 
 <!-- #author  -->
 <!-- Everything inside the #author tags pulls data from the author -->
-<!--{% for author in site.data.authors %}-->
     <header class="site-header author-header outer {% if page.cover or page.cover %}" style="background-image: url({{ site.root }}{% if page.cover %}{{ page.cover }}{% elsif page.cover %}{{ page.cover }}{% endif %}) {% else %}no-cover{% endif %}">
         <div class="inner">
             {% include site-nav.html %}
@@ -45,7 +44,6 @@ logo: 'assets/images/ghost.png'
             </div>
         </div>
     </header>
-<!--{% endfor %}-->
 <!-- /author -->
 
 <!-- The main content area -->
