@@ -2,6 +2,10 @@
    font-family: "Open Sans";
    }
 
+   .site-nav-logo img {
+     border-radius: 50%;
+   }
+
    pre span, code span {
      font-family: monospace,monospace !important;
    }
