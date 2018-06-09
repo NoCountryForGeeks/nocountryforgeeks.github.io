@@ -18,7 +18,7 @@ Hemos tenido un sueño. Hemos tenido un sueño en el cual teníamos todo el tiem
 
 Y así es como nace __No Country For Geeks__. Tenemos un sueño y queremos compartirlo. Queremos programar con _C#_, con _Node_, ver el mundo de las APIs con la perspectiva de _GraphQL_, adentrarnos en _React_ y _Webpack_, _Clojure.js_, que nuestros bots hablen como personas, descubrir _Cognitives Services_ con _LUIS_, _Watson_, y lo más importante, compartir el mundo que vamos aprendiendo. Porque nosotros somos esos __eternos aprendices__ que están detrás de la pantalla de ordenador picando código, desaprendiendo y aprendiendo constantemente del mundo de los bits, la programación y el trabajo en equipo.
 
-![Padawan](http://4.bp.blogspot.com/-yB3xgRo7p0k/UyGdSpCFehI/AAAAAAAA-o4/znj0w-FKTSg/s1600/1075434-qui_gon_jinn_and_obi_wan_kenobi%5B1%5D.jpg)
+![Padawan](assets/images/posts/2017-01-08-hemos-tenido-un-sueno/starwars.jpg)
 
 Nuestra única aspiración al compartir nuestro código es que en el mundo haya algunos programadores más que puedan decir:
 

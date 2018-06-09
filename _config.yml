@@ -25,7 +25,7 @@ twitter: nocountry4geeks # replace by your username
 
 # Disqus
 disqus: True
-disqus_shortname: nocountry4geeks # replace with your disqus username
+disqus_shortname: nocountryforgeeks # replace with your disqus username
 
 # Google Analytics
 google_analytics: UA-103022045-1 # replace with your GA tracking identifier
