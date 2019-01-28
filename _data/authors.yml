@@ -22,3 +22,75 @@ aclopez:
   twitter: _aclopez
   feed: False
   cover: assets/images/blog/authors/aclopez_cover.jpg
+franmolmedo:
+  username: franmolmedo
+  name: Francisco Olmedo
+  location: Madrid
+  url_full: https://twitter.com/fmolmedo
+  url: twitter.com/fmolmedo
+  bio: "Por muy lejos que hayamos llegado, el ideal siempre está más allá"
+  picture: assets/images/blog/authors/franmolmedo.jpeg
+  facebook: False
+  twitter: fmolmedo
+  feed: False
+  cover: assets/images/blog/authors/franmolmedo_cover.jpg
+ivanrodri:
+  username: ivanrodri
+  name: Iván Rodríguez
+  location: Madrid
+  url_full: https://twitter.com/_ivanrodri_
+  url: twitter.com/_ivanrodri_
+  bio: ""
+  picture: assets/images/blog/authors/ivanrodri.jpg
+  facebook: False
+  twitter: _ivanrodri_
+  feed: False
+  cover: False
+danimart1991:
+  username: danimart1991
+  name: Daniel Martín González
+  location: Madrid
+  url_full: http://danielmartingonzalez.com/
+  url: danielmartingonzalez.com
+  bio: "Daniel ‘danimart1991’ Martin González Technology and Videogames lover. Developing your dreams remote working in Plain Concepts. Living in Spain."
+  picture: assets/images/blog/authors/danimart1991.png
+  facebook: False
+  twitter: danimart1991
+  feed: False
+  cover: assets/images/blog/authors/danimart1991_cover.jpg
+elenaps:
+  username: elenaps
+  name: Elena Pérez Sánchez
+  location: Madrid
+  url_full: https://twitter.com/ellepsanchez
+  url: twitter.com/ellepsanchez
+  bio: ""
+  picture: assets/images/blog/authors/elenaps.jpg
+  facebook: False
+  twitter: ellepsanchez
+  feed: False
+  cover: False
+carlosklsone:
+  username: carlosklsone
+  name: CarlosKlsOne
+  location: Madrid
+  url_full: False
+  url: False
+  bio: ""
+  picture: assets/images/blog/authors/carlosklsone.png
+  facebook: False
+  twitter: False
+  feed: False
+  cover: assets/images/blog/authors/carlosklsone_cover.jpg
+jesus:
+  username: jesus
+  name: Jesús Giganto Diez
+  location: Madrid
+  url_full: False
+  url: False
+  bio: ""
+  picture: False
+  facebook: False
+  twitter: False
+  feed: False
+  cover: False
