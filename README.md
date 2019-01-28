@@ -1,3 +1,109 @@
+# No country for Geeks
+
+## Getting started
+
+### Launch in localhost
+
+1. Install a full [Ruby development environment](https://jekyllrb.com/docs/installation/)
+
+2. Install Jekyll and bundler gems
+
+`gem install jekyll bundler`
+
+3. Run `bundle install` to install missing gems.
+
+4. Build the site and make it available on a local server
+
+`bundle exec jekyll serve -d _site`
+
+5. Now browse to http://localhost:4000
+
+**Note:** you can build the site with draft using `--draft`. 
+
+`bundle exec jekyll serve --draft -d _site`
+
+### Create Author
+
+To create author you have to add markdown file with author's information at the author folder.
+
+```markdown
+---
+layout: author
+username: maktub82
+displayname: Sergio Gallardo Sales
+location: Madrid
+url_full: https://twitter.com/maktub82
+url: twitter.com/maktub82
+bio: Delivery Manager en Plain Concepts
+picture: assets/images/blog/authors/maktub82.jpeg
+facebook: False
+twitter: maktub82
+feed: False
+cover: False
+robots: noindex
+---
+```
+
+Then you have to modify the `_data/authors.yml` to add the author information.
+
+```yml
+maktub82:
+  username: maktub82
+  name: Sergio Gallardo Sales
+  location: Madrid
+  url_full: https://twitter.com/maktub82
+  url: twitter.com/maktub82
+  bio: Delivery Manager en Plain Concepts
+  picture: assets/images/blog/maktub82.jpeg
+  facebook: False
+  twitter: maktub82
+  feed: False
+  cover: False
+```
+
+### Create tag
+
+To add a new tag you have to create a file in `tag` folder with this format.
+
+```
+---
+layout: tag
+title: "C#"
+description: False
+tag: csharp
+robots: noindex
+---
+```
+
+## Posts
+
+To create new post you have to create a new file in `_posts` folder.
+
+File: `2017-01-08-hemos-tenido-un-sueno.md`
+
+```md
+---
+layout: post
+current: post
+cover: assets/images/posts/2017-01-08-hemos-tenido-un-sueno/header.jpg
+navigation: True
+title: "Hemos tenido un sueño"
+date: 2017-01-08 12:00:00
+tags: nocountryforgeeks
+class: post-template
+subclass: 'post'
+author: aclopez
+---
+
+Here the post content
+```
+
+You have to add all images in the `assets/images/post/name_of_posts/` folder.
+
+### Drafts
+
+If you want to cretea a draft you have to create file in _draft folder. To launch blog in localhost with draft you have to use --draft when launch the blog.
+
 ## Jasper2
 
 [![Build Status](https://travis-ci.org/jekyller/jasper2.svg?branch=master)](https://travis-ci.org/jekyller/jasper2)
@@ -6,97 +112,6 @@
 
 This is a full-featured port of Ghost's default theme [Casper](https://github.com/tryghost/casper)
 *v2.1.9* for [Jekyll](https://jekyllrb.com/) / [GitHub Pages](https://pages.github.com/).
-
-## Live Demo
-
-[Ghost's Casper](https://demo.ghost.io) // [Jasper2](https://jekyller.github.io/jasper2)
-
-![home page](https://raw.githubusercontent.com/jekyller/jasper2/master/assets/screenshot-desktop.jpg)
-
-
-## Features
-
-* Out of the box support for multiple authors (via `_data/authors.yml`)
-* Full author information including: picture, bio, website, twitter, facebook, etc.
-* Tag description(s) and personalised covers (via `_data/tags.yml`)
-* Related posts view at the bottom of each post
-* All Ghost default pages: Author page(s), Tag page(s), About page(s), 404, etc.
-* Pagination (infinite scrolling or standard pagination, i.e. posts across multiple pages)
-* Atom Feeds by [Jekyll-feed](https://github.com/jekyll/jekyll-feed)
-* Toggleable subscribe button (requires an external service)
-* Code Syntax Highlight with [highlight.js](https://highlightjs.org/)
-* Support for Google Analytics tracking
-* Support for Disqus comments (not Ghost standard)
-
-
-## Getting Started
-
-### Deployment
-
-**Important:**  For security reasons, Github does not allow plugins (under `_plugins/`) when
-deploying with Github Pages. This means:
-
-**1)** that we need to generate your site locally (more details below) and push the resulting
-HTML (the contents of `_site/` or `../jasper2-pages/`) to a Github repository, that GitHub Pages
-then host;
-
-**2)** built the site with [travis-ci](https://travis-ci.org/) (with goodies from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis)) automatically pushing the
-generated HTML files to a *gh-pages* branch.
-This later approach is the one I am currently using to generate the live demo.
-
-**3)** deploy the static website with Jekyll-compatible hosters, such as https://www.netlify.com/, that allow for deployment from the Github repo and publish the website using CDNs. Netlify has a free starter offer.
-
-For option **1)** simply clone this repository (*master branch*), and then run
-`bundle exec jekyll serve` inside the directory. Upload the resulting `_site/` (or `../jasper2-pages/`)
-contents to your repository (*master branch* if uploading as your personal page
-(e.g. username.github.io) or *gh-pages branch* if uploading as a project page
-(as for the [demo](https://github.com/jekyller/jasper2/tree/gh-pages)).
-
-For option **2)** you will need to set up travis-ci for your personal fork. Briefly all you
-need then is to change your details in *[\_config.yml](_config.yml)* so that you can push
-to your github repo. You will also need to generate a secure key to add to your
-*[.travis.yml](.travis.yml)* (you can find more info on how to do it in that file).
-Also make sure you read the documentation from
-[jekyll-travis](https://github.com/mfenner/jekyll-travis). This approach has clear
-advantages in that you simply push your file changes to GitHub and all the HTML files
-are generated for you and pushed to *gh-pages*. Also you get to know if everything is
-still fine with your site builds. Don't hesitate to contact me if you still have any
-issues (see below about issue tracking).
-
-### Author Pages
-
-In order to properly generate author pages you need to rename the field *author* in the
-front matter of every post to match that of your each author's *username* as defined
-in the *[\_data/authors.yml](_data/authors.yml)* file.
-With the latest update, multiple author blogs are now supported out of the box.
-
-### Compiling Styles
-
-Following on the way Casper styles are compiled as [described here](https://github.com/tryghost/casper#development):
-
-Jasper2 styles are compiled using Gulp/PostCSS to polyfill future CSS spec. You'll need Node and Gulp installed globally. After that, from the theme's root directory:
-
-```bash
-$ npm install
-$ gulp
-```
-
-Now you can edit `/assets/css/` files, which will be compiled to `/assets/built/` automatically.
-
-## Issues and Contributing
-
-This install builds well with Ruby v2.4.2 and Jekyll v3.6.2. If you run into any problems
-please log them on the [issue tracker](https://github.com/jekyller/jasper2/issues).
-
-Feel free pull-request your patches and fixes.
-
-## Thanks
-
-
-Many thanks to the Ghost team for all the design work. Also many thanks to all contributors,
-that help keeping the project alive and updated :smile:
-
 
 ## Copyright & License
 
