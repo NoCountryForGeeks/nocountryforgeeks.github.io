@@ -1,120 +1,136 @@
 *:not(code) {
    font-family: "Open Sans";
-   }
+}
 
-   .site-nav-logo img {
-     border-radius: 50%;
-   }
+.site-nav-logo img {
+  border-radius: 50%;
+}
 
-   pre span, code span {
-     font-family: monospace,monospace !important;
-   }
+pre span, code span {
+  font-family: monospace,monospace !important;
+}
 
-   .site-header:before {
-       background: transparent;
-   }
+.site-header:before {
+  background: transparent;
+}
 
-   .post-full-content pre {
-        background: transparent;
-        border: 1px solid #eee;
-   }
+.post-full-content pre {
+  background: transparent;
+  border: 1px solid #eee;
+}
 
-   .home-template .site-title .site-logo,
-   .home-template .site-title {
-       display: none;
-   }
+.home-template .site-title .site-logo,
+.home-template .site-title {
+  display: none;
+}
 
-   .rss-button {
-       border-radius: 50%;
-     width: 28px;
-     height: 28px;
-       margin-right: 7px;
-       opacity: 1;
-       background-color: green;
-   }
+.rss-button {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  margin-right: 7px;
+  opacity: 1;
+  background-color: green;
+}
 
-   .rss-button:hover {
-       opacity: 0.7 !important;
-   }
+.rss-button:hover {
+  opacity: 0.7 !important;
+}
 
-   .rss-button svg {
-       margin-left: 5px;
-   }
+.rss-button svg {
+  margin-left: 5px;
+}
 
-   .social-link-fb svg {
-     margin-left: 1px;
- }
+.social-link-fb svg {
+  margin-left: 1px;
+}
 
-   .social-link {
-     border-radius: 50%;
-     width: 28px;
-     height: 28px;
-     padding: 7px !important;
-       margin-right: 7px;
-       opacity: 1;
-   }
+.social-link {
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  padding: 7px !important;
+  margin-right: 7px;
+  opacity: 1;
+}
 
-   .social-link:hover {
-     opacity: .7 !important;
-   }
+.social-link:hover {
+  opacity: .7 !important;
+}
 
-   .social-links a:last-of-type {
-       padding-right: 7px;
-   }
+.social-links a:last-of-type {
+  padding-right: 7px;
+}
 
-   .social-link-fb {
-     background-color: #4267b2;
-   }
+.social-link-fb {
+  background-color: #4267b2;
+}
 
-   .social-link-tw {
-     background-color: #1da1f2;
-   }
+.social-link-tw {
+  background-color: #1da1f2;
+}
 
-   .social-link-wb {
-       background-color: grey;
-   }
+.social-link-wb {
+  background-color: grey;
+}
 
-   .social-link-rss {
-     background-color: green;
-   }
+.social-link-rss {
+  background-color: green;
+}
 
-   .site-header-content .author-meta {
-     margin-top: 15px;
-   }
+.site-header-content .author-meta {
+  margin-top: 15px;
+}
 
-   .post-full-content li a {
-       word-break: break-all;
-   }
+.post-full-content li a {
+  word-break: break-all;
+}
 
-   .nav li a {
-     text-decoration: underline;
-   }
+.nav li a {
+  text-decoration: underline;
+}
 
-   .nav li a:hover {
-     text-decoration: underline;
-       opacity: 0.8 !important;
-   }
+.nav li a:hover {
+  text-decoration: underline;
+  opacity: 0.8 !important;
+}
 
+.floating-header-logo img {
+  max-height: 28px;
+}
 
-   @media only screen and (min-width: 900px) {
-     .home-template .site-header .site-header-content {
-       height: 580px;
-     }
+.site-nav-logo {
+  padding: 0px;
+  height: 42px;
+}
 
-       .home-template .site-nav {
-           top: -60px;
-           font-size: 16px;
-       }
+.site-nav-logo img {
+  height: 42px;
+}
 
-       .home-template .site-nav .nav a {
-           text-shadow: 2px 1px 1px rgba(5, 5, 5, 0.8);
-           font-weight: bold;
-           opacity: 1;
-       }
- }
+@media only screen and (min-width: 900px) {
+  .home-template .site-header .site-header-content {
+    height: 580px;
+  }
 
-   @media only screen and (max-width: 500px) {
-       .home-template .site-header {
-           background-position-x: -55px;
-     }
-   }
+  .home-template .site-nav {
+      top: -60px;
+      font-size: 16px;
+  }
+
+  .home-template .site-nav .nav a {
+      text-shadow: 2px 1px 1px rgba(5, 5, 5, 0.8);
+      font-weight: bold;
+      opacity: 1;
+  }
+
+  .floating-header-logo img {
+    max-height: 42px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .home-template .site-header {
+      background-position-x: -55px;
+    }
+}
