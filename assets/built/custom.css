@@ -95,6 +95,10 @@ pre span, code span {
   opacity: 0.8 !important;
 }
 
+.highlighter-rouge {
+  width: 100%;
+}
+
 .floating-header-logo img {
   max-height: 28px;
 }
