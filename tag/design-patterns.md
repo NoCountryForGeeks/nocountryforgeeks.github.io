@@ -1,6 +1,6 @@
 ---
 layout: tag
-title: design-patterns
+title: "Design Patterns"
 description: False
 tag: design-patterns
 robots: noindex
