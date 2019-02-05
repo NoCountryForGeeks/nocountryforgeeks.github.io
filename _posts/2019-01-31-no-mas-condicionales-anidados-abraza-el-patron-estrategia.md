@@ -1,10 +1,10 @@
 ---
 layout: post
 current: post
-cover: assets/images/posts/2018-01-31-no-mas-condicionales-anidados-abraza-el-patron-estrategia/header.jpg
+cover: assets/images/posts/2019-01-31-no-mas-condicionales-anidados-abraza-el-patron-estrategia/header.jpg
 navigation: True
 title: "No más condicionales anidados, abraza el patrón estrategia"
-date: 2018-01-31 12:00:00
+date: 2019-01-31 12:00:00
 tags: design-patterns
 class: post-template
 subclass: 'post'
