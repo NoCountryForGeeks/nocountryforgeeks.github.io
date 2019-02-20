@@ -13,7 +13,7 @@ cover: assets/images/blog/bg.jpg
 logo: assets/images/blog/logo.png
 logo_dark: assets/images/blog/logo.png
 favicon: assets/images/blog/favicon.ico
-production_url: http://nocountryforgeeks.com/
+production_url: http://www.nocountryforgeeks.com/
 source_url: https://github.com/NoCountryForGeeks/nocountryforgeeks.github.io
 
 # Social info
@@ -73,7 +73,7 @@ repo: nocountryforgeeks.github.io
 branch: master
 relative_source: ../NoCountryForGeeks/
 destination: ../nocountryforgeeks.github.io/
-production_url:  http://nocountryforgeeks.com/
+production_url:  http://www.nocountryforgeeks.com/
 source_url:  https://github.com/NoCountryForGeeks/nocountryforgeeks.github.io
 
 
