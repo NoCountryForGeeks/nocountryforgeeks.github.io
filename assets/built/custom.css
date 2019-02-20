@@ -112,6 +112,10 @@ pre span, code span {
   height: 42px;
 }
 
+.site-header-content .site-description {
+  display: none;
+}
+
 @media only screen and (min-width: 900px) {
   .home-template .site-header .site-header-content {
     height: 580px;
