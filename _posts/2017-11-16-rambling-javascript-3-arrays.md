@@ -5,7 +5,7 @@ cover: assets/images/posts/2017-11-16-arrays-in-js/header.jpg
 navigation: True
 title: "Arrays en Javascript - ES6"
 date: 2017-11-16 12:00:00
-tags: javascript ramblingjavascript
+tags: javascript rambling-javascript
 class: post-template
 subclass: 'post'
 author: aclopez

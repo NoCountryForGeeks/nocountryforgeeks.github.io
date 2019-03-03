@@ -5,7 +5,7 @@ cover: assets/images/posts/2017-08-24-rambling-javascript-1-let-y-const/header.p
 navigation: True
 title: "Rambling javascript 1: let y const"
 date: 2017-08-24 12:00:00
-tags: javascript ramblingjavascript
+tags: javascript rambling-javascript
 class: post-template
 subclass: "post"
 author: franmolmedo

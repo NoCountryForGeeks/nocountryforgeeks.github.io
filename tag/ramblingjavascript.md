@@ -2,6 +2,6 @@
 layout: tag
 title: "Rambling JavaScript"
 description: False
-tag: ramblingjavascript
+tag: rambling-javascript
 robots: noindex
 ---

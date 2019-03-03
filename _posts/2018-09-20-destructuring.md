@@ -5,7 +5,7 @@ cover: assets/images/posts/2018-09-18-destructuring/header.jpg
 navigation: True
 title: "Destructuring en Javascript"
 date: 2018-09-20 12:00:00
-tags: javascript ramblingjavascript
+tags: javascript rambling-javascript
 class: post-template
 subclass: 'post'
 author: aclopez

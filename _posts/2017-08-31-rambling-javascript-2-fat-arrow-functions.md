@@ -5,7 +5,7 @@ cover: assets/images/posts/2017-08-31-rambling-javascript-2-fat-arrow-functions/
 navigation: True
 title: "Rambling javascript 2: Fat arrow functions"
 date: 2017-08-31 12:00:00
-tags: javascript ramblingjavascript
+tags: javascript rambling-javascript
 class: post-template
 subclass: "post"
 author: franmolmedo

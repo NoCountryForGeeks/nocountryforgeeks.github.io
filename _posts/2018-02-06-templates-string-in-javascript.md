@@ -5,7 +5,7 @@ cover: assets/images/posts/2018-02-06-templates-string/header.jpg
 navigation: True
 title: "Templates String en Javascript"
 date: 2018-02-06 12:00:00
-tags: javascript ramblingjavascript
+tags: javascript rambling-javascript
 class: post-template
 subclass: 'post'
 author: aclopez
