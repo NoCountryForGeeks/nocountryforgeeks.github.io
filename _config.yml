@@ -35,7 +35,7 @@ baseurl: /
 root: /
 
 # Permalinks
-permalink: /:title
+permalink: /:title/
 # permalink: /author/:author
 # permalink: /tag/:tag
 
