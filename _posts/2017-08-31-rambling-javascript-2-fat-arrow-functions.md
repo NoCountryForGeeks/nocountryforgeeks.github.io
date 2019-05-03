@@ -42,7 +42,7 @@ Creo que se intuye que extendiendo su uso conseguiremos un código más claro y 
 
 El siguiente ejemplo también nos permite presentar un nuevo detalle relativo a la sintaxis:
 
-![Ejemplo sintaxis](assets/images/posts/2017-08-31-rambling-javascript-2-fat-arrow-functions/basicExample.gif)
+![Ejemplo sintaxis](/assets/images/posts/2017-08-31-rambling-javascript-2-fat-arrow-functions/basicExample.gif)
 
 Efectivamente, también hay puntos que aclarar sobre la sintaxis relativo a los argumentos:
 

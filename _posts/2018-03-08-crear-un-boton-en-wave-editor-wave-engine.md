@@ -23,7 +23,7 @@ Partimos del [proyecto base introductorio](https://github.com/WaveEngine/Documen
 
 Para ello, creamos un nuevo proyecto e incluimos un objeto *Cube* de tipo *Primitive 3D*. Agregamos el componente *Spinner* al cubo para que rote.
 
-![](assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot1.png)
+![](/assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot1.png)
 
 Wave Engine está basado en [la programación orientada a entidades](http://cowboyprogramming.com/2007/01/05/evolve-your-heirachy/). Un componente no es más que cada pieza que compone una entidad. Todos los componentes heredan de la clase [**Component**](http://doc.waveengine.net/index.html#frlrfWaveEngineFrameworkComponentClassTopic.html).
 
@@ -35,7 +35,7 @@ Es importante tener la solución ordenada. Nuestro proyecto puede crecer y tener
 
 Una vez abierta la solución en *Visual Studio*. Creamos la carpeta *Components* dentro del proyecto *Shared*. Es decir, dentro del proyecto común a todas las plataformas. Dentro de ella creamos la clase *ButtonUI* que será nuestro componente.
 
-![](assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot2.png)
+![](/assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot2.png)
 
 Abrimos la clase recién creada y empezamos a programar.
 
@@ -164,27 +164,27 @@ La funcionalidad principal del botón está terminada.
 
 Para ver si funciona el botón, y que resultados hemos obtenido de este simple componente, volvemos a *Wave Editor*, y añadimos si no tenemos ya una cámara *2D*. Para ello, tenemos que asegurarnos de tener seleccionado el modo *2D* del editor, y añadimos una entidad de tipo *Fixed Camera 2D* a la lista de entidades.
 
-![](assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot3.png)
+![](/assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot3.png)
 
 A continuación, añadimos un *Sprite2D*, al que añadimos los componentes necesarios *RectangleCollider2D* y *TouchGestures*, aunque el primero no lo hemos indicado en el componente ButtonUI, el componente *TouchGestures* lo necesita para saber en qué punto el usuario ha realizado el gesto en la entidad. Por último, añadimos nuestro componente ButtonUI.
 
-![](assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot4.png)
+![](/assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot4.png)
 
 Una vez añadidos los componentes, tenemos que configurarlos. Para ello, añadimos los assets necesarios para el botón en estado normal y presionado.
 
-![](assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/ButtonPlay.png)
+![](/assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/ButtonPlay.png)
 
 Podemos meterlos dentro de la carpeta *Assets* de nuestro proyecto.
 
-![](assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot5.png)
+![](/assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot5.png)
 
 Por último, añadimos los *assets* a las propiedades *TexturePath* del componente *Sprite* y *PressedTexturePath* de nuestro componente.
 
-![](assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot6.png)
+![](/assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot6.png)
 
 Ya podemos probar el botón en nuestro juego y ver como la textura cambia cuando es presionado.
 
-![](assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot7.png)
+![](/assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot7.png)
 
 ## Incluyendo eventos y acciones
 
@@ -257,7 +257,7 @@ private void OnPlayButtonClicked(object sender, EventArgs e)
 
 El nombre indicado para buscar el botón tiene que ser exactamente el nombre del botón indicado en el editor:
 
-![](assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot8.png)
+![](/assets/images/posts/2018-03-08-crear-un-boton-en-wave-editor-wave-engine/screenshot8.png)
 
 A continuación, buscamos del mismo modo el cubo y su componente *Spinner* para poder activarlo y desactivarlo.
 

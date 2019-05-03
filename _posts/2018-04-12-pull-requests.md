@@ -41,7 +41,7 @@ git rebase -i develop
 
 No os preocupéis de momento por el procedimiento, quedaos con el concepto. Si os imagináis una rama _develop_ a la cual se le hacen PRs constantemente desde otras ramas tipo _feature/12545_, al final develop tendrá dos _commits_ por PR, el _commit_ creado y el commit del merge a develop o incluso podemos juntar estos dos commits en uno y dejar un solo commit por PR con un último squash en el interfaz de la herramienta de PR que usemos. Así cuidamos nuestro repositorio, y una vez que lo veamos desde _Git_ será estético de ver y podremos movernos por los commits de manera cómoda.
 
-![Repo en Git](assets/images/posts/2018-04-12-pull-requests/GitRepo.PNG)
+![Repo en Git](/assets/images/posts/2018-04-12-pull-requests/GitRepo.png)
 
 __Hacer las cosas bien en el repositorio es importante y siempre cuesta más trabajo que dejarlo todo descuidado__; pero es verdad que para hacer todo esto no son necesarias las PRs, aunque sí son un buen instrumento de que todo este procedimiento no se olvide y salga de manera natural casi sin darnos cuenta de que está ahí. 
 
@@ -67,7 +67,7 @@ El procedimiento de generar las PRs dependerá de la estrategia de ramas que ten
 
 Hay mucha teoría sobre la estrategia que se pueden llevar con las ramas y os recomiendo echar un vistazo a [Git Flow](http://aprendegit.com/que-es-git-flow/)
 
-![Git Flows](assets/images/posts/2018-04-12-pull-requests/gitflow.png)
+![Git Flows](/assets/images/posts/2018-04-12-pull-requests/gitflow.png)
 
 Aquí vamos a ver las estrategias de ramas que se llevan a cabo en mi equipo. En ambas estrategias tendremos dos ramas principales: _master_ y _develop_:
 
@@ -114,7 +114,7 @@ Una vez hecho esto, se abrirá el editor con los commits que tenemos en la rama.
 
 Para dejar todos los commits como uno, tendremos que dejar el primer commit a _pick_, y poner los restantes a _squash_ (con una s solo también vale). Cuando lo tengamos listo, guardamos el archivo, cerramos el editor y nos saldrá una nueva pantalla con los commits que vamos a "squashear". En esta pantalla podemos cambiar el mensaje del commit general poniendo algo entre la línea 1 y 2, dejando así ese como mensaje global. Suele ser útil si te has despitado en los mensajes de tus commits.
 
-![Git rebase](assets/images/posts/2018-04-12-pull-requests/gitrebase.gif)
+![Git rebase](/assets/images/posts/2018-04-12-pull-requests/gitrebase.gif)
 
 Si todo ha salido correctamente podemos hacer un ```git push origin feature/23154``` y esto subirá la rama al repositorio y podremos crear la PR en el VSTS (ver procedimiento VSTS). Si hemos creado alguna PR en esta rama en VSTS tendremos que usar la opción -f de push: ```git push origin feature/23154 -f```.
 
@@ -130,7 +130,7 @@ No confundir con el comando de _rebase_ anterior, ya que este no tiene el parám
 
 Una vez resueltos los conflictos, hay que añadir los cambios con un ```git add . ``` y luego confirmar el rebase con ```git rebase --continue```. __En los procesos de resolver conflictos no hay que hacer ningún commit.__
 
-![Git rebase](assets/images/posts/2018-04-12-pull-requests/gitrebase.png)
+![Git rebase](/assets/images/posts/2018-04-12-pull-requests/gitrebase.png)
 
 Todo resuelto, podemos "squashear" nuestros commits y "pushear" la rama para crear el PR.
 

@@ -39,7 +39,7 @@ public class Player : MonoBehaviour
 }
 ```
 
-![Attributes](assets/images/posts/2017-08-14-atributos-en-unity/attributes01.jpg)
+![Attributes](/assets/images/posts/2017-08-14-atributos-en-unity/attributes01.jpg)
 
 
 ## Atributos
@@ -61,7 +61,7 @@ public int Lives = 0;
 public float MaxHealth = 0.0f;
 ```
 
-![Attributes](assets/images/posts/2017-08-14-atributos-en-unity/attributes02.jpg)
+![Attributes](/assets/images/posts/2017-08-14-atributos-en-unity/attributes02.jpg)
 
 **Nota:** estos atributos, solo funcionan en propiedades públicas como es lógico, más adelante veremos como mostrar una propiedad privada en el inspector.
 
@@ -83,7 +83,7 @@ public int Lives = 0;
 public float MaxHealth = 0.0f;
 ```
 
-![Attributes](assets/images/posts/2017-08-14-atributos-en-unity/attributes03.jpg)
+![Attributes](/assets/images/posts/2017-08-14-atributos-en-unity/attributes03.jpg)
 
 ### Atributos HideInInspector y SerializeField
 
@@ -122,7 +122,7 @@ private bool _attack;
 #endregion
 ```
 
-![Attributes](assets/images/posts/2017-08-14-atributos-en-unity/attributes04.jpg)
+![Attributes](/assets/images/posts/2017-08-14-atributos-en-unity/attributes04.jpg)
 
 ### Atributo Tooltip
 
@@ -138,7 +138,7 @@ public float JumpPower = 0.0f;
 public float MaxSpeed = 0.0f;
 ```
 
-![Attributes](assets/images/posts/2017-08-14-atributos-en-unity/attributes05.jpg)
+![Attributes](/assets/images/posts/2017-08-14-atributos-en-unity/attributes05.jpg)
 
 ### Bonus: Atributo RequireComponent
 
@@ -152,7 +152,7 @@ public class Player : MonoBehaviour
 }
 ```
 
-![Attributes](assets/images/posts/2017-08-14-atributos-en-unity/attributes06.jpg)
+![Attributes](/assets/images/posts/2017-08-14-atributos-en-unity/attributes06.jpg)
 
 Hasta aquí los atributos que más útiles me han sido hasta ahora. Hay muchos más, como veréis en el link anterior, podéis probar por vuestra cuenta y ver si os son útiles o no a la hora de vuestros desarrollos.
 

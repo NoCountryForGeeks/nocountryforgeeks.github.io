@@ -28,7 +28,7 @@ que estuviera definido localmente.
 La idea se basa en definir servicios que constarán de una serie de métodos
 RPC en los cuales se detallan el mensaje de entrada que reciben y el mensaje de salida que generan. Realmente, solo es necesario definir estos métodos y los mensajes que se van a intercambiar y GRPC se encargará de realizar toda la labor oscura por nosotros.
 
-![GRPC Basic structure](assets/images/posts/2018-10-04-grpc-protocol-buffers/grpc-basic.svg)
+![GRPC Basic structure](/assets/images/posts/2018-10-04-grpc-protocol-buffers/grpc-basic.svg)
 
 GRPC es moderno, rápido y eficiente de baja latencia, construido utilizando HTTP/2, que soporta streaming, es independiente del lenguaje empleado y que, además, hace relativamente sencillo el incorporar autenticación, balance de carga, trazas y monitorización.
 
@@ -166,7 +166,7 @@ Para declarar uno u otro tipo de mensajes basta con añadir la palabra reservada
 
 Perfecto, ya tenemos la definición de nuestro servicio, conjuntamente con la definición de nuestro mensaje. Ahora necesitamos generar el código en el lenguaje en el que nos sintamos más cómodos para empezar a trabajar en nuestra aplicación. Para ello tendremos que descargar la aplicación [**_protoc_**](https://github.com/google/protobuf/releases) que corresponda a nuestro sistema operativo (en nuestro caso _Windows_). Una vez descargado, descomprimimos el fichero en la carpeta destino deseada e incorporamos la subcarpeta **bin** al **_PATH_**. Podemos verificar si todo funciona correctamente desde el terminal:
 
-![Protoc](assets/images/posts/2018-10-04-grpc-protocol-buffers/grpc-basic.svg/protoc.PNG)
+![Protoc](/assets/images/posts/2018-10-04-grpc-protocol-buffers/protoc.PNG)
 
 Tenemos que especificar el archivo o los archivos de entrada y el lenguaje en los que queremos obtener la salida. Por ejemplo, nosotros tenemos el fichero _chat.proto_ dentro del directorio _proto_ y queremos generar la implementación en **python**, **java** y **c#**. Para ello, utilizaremos los siguientes comandos:
 
@@ -182,7 +182,7 @@ Previamente hemos creado tres carpetas (python, csharp y java dentro del directo
 - En **_Java_**, por el contrario, se genera la estructura de carpetas típica según el nombre del paquete indicado (nosotros hemos usado la opción java\*package y java\*multiple*files) y vemos que se generan 3 archivos: \*\*\_Chat.java**\*, **\_ChatMessage.java**\* y **\_ChatMessageOrBuilder.java*\*\*
 - Por último, para **_Python_** se genera, igualmente, un solo archivo **_chat_pb2.py_**
 
-![Ficheros generados](assets/images/posts/2018-10-04-grpc-protocol-buffers/grpc-basic.svg/generatedFiles.PNG)
+![Ficheros generados](/assets/images/posts/2018-10-04-grpc-protocol-buffers/generatedFiles.PNG)
 
 ### 2.2. Trabajando en el servidor
 
@@ -274,7 +274,7 @@ Tras ello, lo arrancamos y lo dejamos ejecutándose hasta que termine (por error
 
 Para arrancar el servidor nos situamos en la carpeta base del proyecto y ejecutamos **_gradle run_**.
 
-![Servidor corriendo](assets/images/posts/2018-10-04-grpc-protocol-buffers/grpc-basic.svg/serverRunning.PNG)
+![Servidor corriendo](/assets/images/posts/2018-10-04-grpc-protocol-buffers/serverRunning.PNG)
 
 ### 2.2.- Clientes
 
@@ -366,7 +366,7 @@ En la parte inferior mostramos el código asociado al evento de pulsar el botón
 
 El resultado de nuestra aplicación lo podemos ver en el siguiente gif:
 
-![Chat](assets/images/posts/2018-10-04-grpc-protocol-buffers/grpc-basic.svg/chatDemo.gif)
+![Chat](/assets/images/posts/2018-10-04-grpc-protocol-buffers/chatDemo.gif)
 
 ## Conclusiones
 

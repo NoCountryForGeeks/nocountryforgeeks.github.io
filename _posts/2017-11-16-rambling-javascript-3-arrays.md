@@ -293,7 +293,7 @@ _.partition([1, 2, 3, 4], n => n % 2);
 // → [[1, 3], [2, 4]]
 ```
 
-![Lodash](assets/images/posts/2017-11-16-arrays-in-js/lodash.png)
+![Lodash](/assets/images/posts/2017-11-16-arrays-in-js/lodash.png)
 
 * [Ramda js](http://ramdajs.com/docs/) es una librería de _Javascript_ funcional que tiene cosas realmente chulas. Merece la pena echarle un vistazo a cosas como esta:
 
@@ -303,7 +303,7 @@ R.aperture(3, [1, 2, 3, 4, 5]); //=> [[1, 2, 3], [2, 3, 4], [3, 4, 5]]
 R.aperture(7, [1, 2, 3, 4, 5]); //=> []
 ```
 
-![Ramda js](assets/images/posts/2017-11-16-arrays-in-js/ramda-logo-cover.png)
+![Ramda js](/assets/images/posts/2017-11-16-arrays-in-js/ramda-logo-cover.png)
 
 # Conclusiones
 

@@ -24,10 +24,10 @@ Para hacer las pruebas vamos a utilizar la última versión disponible de React,
 npx create-react-app react-context-portals-example
 ```
 
-![create-react-app](assets/images/posts/2018-04-02-react-context-api-y-portals/create-react-app.png)
+![create-react-app](/assets/images/posts/2018-04-02-react-context-api-y-portals/create-react-app.png)
 
 Nos situamos en la carpeta que nos ha creado y abrimos la aplicación en nuestro editor favorito. **_Create React App_** nos crea una aplicación React bastante estándar.
-![app-structure](assets/images/posts/2018-04-02-react-context-api-y-portals/app-structure.png).
+![app-structure](/assets/images/posts/2018-04-02-react-context-api-y-portals/app-structure.png).
 
 Vamos a abrir el fichero package.json y vamos a actualizar la versión de los paquetes correspondientes a react y a react-dom. En concreto, vamos a utilizar, como ya hemos comentado, la última disponible en estos momentos. El fichero tiene que quedar de la siguiente forma:
 
@@ -52,7 +52,7 @@ Vamos a abrir el fichero package.json y vamos a actualizar la versión de los pa
 
 Una vez hecho esto, nos vamos a la consola y ejecutamos `yarn start` para que se nos lance la aplicación en nuestro navegador:
 
-![base-app](assets/images/posts/2018-04-02-react-context-api-y-portals/base-app.png).
+![base-app](/assets/images/posts/2018-04-02-react-context-api-y-portals/base-app.png).
 
 ### Context API
 
@@ -97,7 +97,7 @@ export default ({ currentValue }) => (
 
 Así, la aplicación quedaría de la siguiente forma:
 
-![counter-app](assets/images/posts/2018-04-02-react-context-api-y-portals/counter-app.gif).
+![counter-app](/assets/images/posts/2018-04-02-react-context-api-y-portals/counter-app.gif).
 
 El proceso se hace un poco más farragoso si hubieran más niveles de componentes intermedios. Imaginemos ahora que toda la funcionalidad de nuestro contador se encuentra en un componente Counter, y dentro de éste tendríamos los botones y la referencia al componente presentacional, al cual le tenemos que pasar el valor actual del contador desde el componente aplicación. La estructura sería la siguiente:
 
@@ -158,7 +158,7 @@ En este caso vemos que el valor actual del contador tiene que llegar desde el co
 En un caso como el comentado, quizás se nos ocurra utilizar una librería externa para el manejo del estado de la aplicación (como [redux](https://github.com/reactjs/redux)) conectaría mis componentes a la store utilizando el **HOC** **_connect_** de [react-redux](https://github.com/reactjs/react-redux) para mapear las propiedades de nuestro estado como prop del componente deseado.
 Con **_context_** el procedimiento sería parecido. En primer lugar, generaremos nuestro contexto para mapear nuestra store:
 
-![creating-context](assets/images/posts/2018-04-02-react-context-api-y-portals/creating-context.gif).
+![creating-context](/assets/images/posts/2018-04-02-react-context-api-y-portals/creating-context.gif).
 
 El código final de nuestro conexto quedará de la siguiente forma:
 
@@ -256,7 +256,7 @@ La otra idea que quería comentar en esta entrada son los Portals. Cuando hablam
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
-![portal-init](assets/images/posts/2018-04-02-react-context-api-y-portals/portal-init.png).
+![portal-init](/assets/images/posts/2018-04-02-react-context-api-y-portals/portal-init.PNG).
 
 En **_index.js_** estamos estableciendo que nuestra aplicación se renderice dentro del elemento con id **_root_**, que, como vemos, es un **div**.
 Sin embargo, algunas veces podemos querer cambiar este comportamiento y renderizar componentes fuera de este contenedor. Para ello, utilizaremos los portals.
@@ -293,7 +293,7 @@ Importamos **ReactDOM**, para poder crear el portal. El método **_createPortal_
 - El primero es lo que queremos renderizar en el portal (componentes, elementos jsx...) y el segundo parámetro es el elemento del DOM donde queremos que se renderice. En este caso, hemos añadido un nuevo div con id **_portal_** que es el que utilizamos aquí.
   El resultado es el siguiente:
 
-![portal-end](assets/images/posts/2018-04-02-react-context-api-y-portals/portal-end.png).
+![portal-end](/assets/images/posts/2018-04-02-react-context-api-y-portals/portal-end.PNG).
 
 ## Conclusiones
 

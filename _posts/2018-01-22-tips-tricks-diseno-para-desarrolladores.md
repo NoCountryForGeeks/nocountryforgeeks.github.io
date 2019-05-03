@@ -84,29 +84,29 @@ Para abrir una imagen en illustrator se hace de la siguiente manera:
 
 3- Ajusta el documento al tamaño de la imagen dejando un margen derecho para añadir cuatro rectángulos.
 
-![](assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/ajustarimagen.jpg)
+![](/assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/ajustarimagen.jpg)
 
 4- **[Trick]** Si creas un rectángulo y arrastras el rectángulo mientras mantienes presionados **Alt + Shift**, este se duplicará alineándose al rectángulo ya creado.
 
-![](assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/duplicaruno.gif)
+![](/assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/duplicaruno.gif)
 
 Si ahora pulsas **Ctrl + D** (PC) o **Cmd + D** (Mac), se duplicará de nuevo con las mismas características que el anterior. Es decir, mismo tamaño y mismo desplazamiento.
 
-![](assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/duplicarvarios.gif)
+![](/assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/duplicarvarios.gif)
 
 Quedaría algo parecido a esto:
 
-![](assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/crearcajas.gif)
+![](/assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/crearcajas.gif)
 
 5- Por último, utilizaremos el **cuenta gotas** para ir guardando los colores destacados.
 
 Si haces esto cada vez que te enfrentes a un diseño nuevo, podrás crear tu propia biblioteca de gamas de colores.
 
-![](assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/cuentagotas.jpg)
+![](/assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/cuentagotas.jpg)
 
 Y este es el resultado al aplicar la gama de colores en nuestra cabecera, a ver que te parece ;)
 
-![](assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/header.jpg)
+![](/assets/images/posts/2018-01-22-tips-tricks-diseno-para-desarrolladores-color/header.jpg)
 
 
 

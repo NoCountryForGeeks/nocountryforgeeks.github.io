@@ -37,7 +37,7 @@ Este patrón lo usan librerías como **react-router** o **react-motion**.
 
 En este caso vamos a realizar un ejemplo de un input en el cual, al escribir nos mostrará el mensaje en pantalla.
 
-![Input example](assets/images/posts/2018-02-13-hoc-vs-render-props/classComponent.gif)
+![Input example](/assets/images/posts/2018-02-13-hoc-vs-render-props/classComponent.gif)
 
 ```javascript
 import React from "react";
@@ -182,7 +182,7 @@ ReactDOM.render(<AppWithCustomMessage/>, document.querySelector('#app'));
 
 En este caso, hemos creado otro **HOC** que estará entre el **HOC** con la funcionalidad y el **componente** que muestra el mensaje. ¿Funciona correctamente?
 
-![Props colision](assets/images/posts/2018-02-13-hoc-vs-render-props/customMessage.gif)
+![Props colision](/assets/images/posts/2018-02-13-hoc-vs-render-props/customMessage.gif)
 
 En este caso nos encontramos con el problema de colisión de **props** el **HOC** **WithCustomMessage** esta machacando las **props** que esta pasando **WriteMessage**, para que esto funcione, tenemos que cambiar el nombre de una de las **props**.
 
@@ -355,4 +355,4 @@ Usando **Render Props** evitamos la coisión de **props** que teniamos usando lo
 
 Con el uso de este **patrón** se puede reemplazar cualquier **HOC** por un componente con **Render props** pero no todos los componentes con **Render props** se pueden hacer con un **HOC**.
 
-![Conclusion tweet](assets/images/posts/2018-02-13-hoc-vs-render-props/tweet.jpg)
+![Conclusion tweet](/assets/images/posts/2018-02-13-hoc-vs-render-props/tweet.jpg)

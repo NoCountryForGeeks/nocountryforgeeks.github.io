@@ -84,7 +84,7 @@ Un **sprite SVG** consiste en coger todos los **SVG** que contiene nuestra web y
 
 Para generar un **sprite SVG** podemos realizarlo a mano (es un trabajo tedioso y en el que podemos equivocarnos) o usar tareas **gulp, grunt o webpack** para crearlos, estas tareas nos permiten configurar los plugins con los cuales podemos eliminar cosas innecesarias de nuestros **SVG** y que ocuparían espacio innecesario en el **sprite**.
 
-![Sprite SVG](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/SpriteSVGProcess.jpg)
+![Sprite SVG](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/SpriteSVGProcess.jpg)
 
 ## Generando un sprite SVG con Webpack en mi aplicación React
 
@@ -250,7 +250,7 @@ Cuando arranquemos nuestra aplicación este loader se encargara de generar un **
 
 Para probar y ver como funciona nuestro nuevo loader generando un **sprite,** vamos a probar a hacer una barra de navegación con los típicos iconos de redes sociales, para ello yo los voy a insertar en una carpeta icons que he creado en mi componente **navigationBar.js**
 
-![Icons folder](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/IconsFolder.jpg)
+![Icons folder](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/IconsFolder.jpg)
 
 Despues desde nuestro componente **NavigationBar** vamos a importar los **SVG** y usar con la etiqueta `<use>` al cual le pasaremos la url del icono.
 
@@ -304,7 +304,7 @@ La url que le pasamos a la etiqueta `<use>` es la que nos pasa directamente el l
 
 El resultado de la barra de navegación seria el siguiente.
 
-![NavigationBar with Out style](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/NavigationBarWithOutStyle.jpg)
+![NavigationBar with Out style](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/NavigationBarWithOutStyle.jpg)
 
 Si nos fijamos estamos repitiendo mucho código, vamos a extraerlo a un componente **Icon** al cual simplemente le pasemos el **SVG,** de esta manera centralizaremos todos los cambios que queramos hacer en todos los iconos de la aplicación. Mi componente **Icon** quedaria de esta manera:
 
@@ -363,7 +363,7 @@ Ahora que ya tenemos nuestro **sprite SVG** funcionando podemos estilarlo y dar 
 }
 ```
 
-![Icons fill](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/FillIcons.jpg)
+![Icons fill](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/FillIcons.jpg)
 
 ## Comparando carga de una aplicacion, sprite VS no sprite
 
@@ -371,33 +371,33 @@ Para comparar la carga de una página usando **sprite SVG** y otra que no lo usa
 
 #### Aplicación con sprite
 
-![Web with sprite SVG](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/PageWithSprite.jpg)
+![Web with sprite SVG](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/PageWithSprite.jpg)
 
 #### Aplicación sin sprite
 
-![Web with out sprite SVG](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/PageWithOutSprite.jpg)
+![Web with out sprite SVG](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/PageWithOutSprite.jpg)
 
 De una manera no muy precisa podemos ver el tiempo de carga de ambas aplicaciones si abrimos las **devTool de Chrome**
 
 #### Página con sprite SVG
 
-![Web with sprite SVG](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/LoadPageWithSprite.jpg)
+![Web with sprite SVG](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/LoadPageWithSprite.jpg)
 
 #### Página sin sprite
 
-![Web with out sprite SVG](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/LoadPageWithOutSprite.jpg)
+![Web with out sprite SVG](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/LoadPageWithOutSprite.jpg)
 
 Como podemos ver no hay mucha diferencia, pero si nos fijamos en las llamadas, la pagina con el **sprite SVG** solo necesita una llamada mientras que la otra necesita una para cada una.
 
 Para comparar de una forma mas precisa el tiempo de carga voy a uar la herramienta online [dareboost](https://www.dareboost.com)
 
-![Sprite vs no sprite](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/VS.jpg)
+![Sprite vs no sprite](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/VS.jpg)
 
-![Performance quality](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/Performance.jpg)
+![Performance quality](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/Performance.jpg)
 
-![Load time](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/Loadtime.jpg)
+![Load time](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/Loadtime.jpg)
 
-![Requests](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/Request.jpg)
+![Requests](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/Request.jpg)
 
 Como podemos ver la web saca mas o menos las mismas conclusiones que podiamos haber sacado viendo las devTools, lo que mas llama la atencion es el **performace score** ya que hay una gran diferencia entre la página que usa **sprite SVG** y la que no.
 
@@ -430,25 +430,25 @@ export default Icon;
 
 El siguiente paso es conseguir que los **screen readers** tengan la informacion que sea util para el usuario, si ahora mismo pusiésemos el ratón encima de algún SVG de la página, no aparecería ningún tipo de tooltip indicando lo que representa esa imagen.
 
-![No tooltip](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/NoTooltip.gif)
+![No tooltip](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/NoTooltip.gif)
 
 Existe una [web](http://describler.com/#image) que nos permite revisar todo el **SVG** a falta de las etiquetas `<title>` y `<desc>`, hay que tener en cuenta que un **SVG** puede tener una etiqueta `<title>` y `<desc>` por cada uno de lo vectores que contiene.
 
 Si abro mi **SVG** de twitter en dicha web, me aparece lo siguiente:
 
-![Twitter describer](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/TwitterDescriber.jpg)
+![Twitter describer](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/TwitterDescriber.jpg)
 
 Me dice que debería de tener varios `<title>` y `<desc>`, en este caso no sería necesario añadir ambos, ya que solo representa una única figura, si ejecuto el screen reader que tiene la página, no me da ningún tipo de información.
 
-![Twitter describer fix](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/TwitterDescriberFix.jpg)
+![Twitter describer fix](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/TwitterDescriberFix.jpg)
 
 Cuando le añadimos el title y desc si ejecutamos el screen reader veremos como interpreta los nuevos valores que le hemos introducido. Si nos bajamos el archivo que hemos modifica y lo insertamos en nuestra web, obtendremos el resultado que queríamos.
 
-![Tooltip](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/Tooltip.gif)
+![Tooltip](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/Tooltip.gif)
 
 También podemos hacer que cada uno de los vectores de nuestro svg reaccione a su propio `<title>` y `<desc>` esto nos puede venir bien en el ejemplo del mapa que tenemos. Si hacemos los mismos pasos que antes y añadimos los títulos y descripciones a cada uno de los vectores que nos marque podemos hacer que reaccione de esta manera.
 
-![Multi tooltip](assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/MultiTooltip.gif)
+![Multi tooltip](/assets/images/posts/2017-10-31-generando-un-sprite-SVG-en-aplicacion-react-performance-y-accesibilidad/MultiTooltip.gif)
 
 ## Soporte para IE11
 

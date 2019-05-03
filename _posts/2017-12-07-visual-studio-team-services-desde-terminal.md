@@ -17,7 +17,7 @@ Los informáticos somos vagos por naturaleza, de hecho, la informática nació c
 
 Si a esto le unimos el hecho de que odio tener muchas herramientas abiertas, que a su vez hacen muchas cosas diferentes, y que quizás no tendrían que hacer por sí mismas, entramos en un estado de locura que causa un caos en el escritorio del desarrollador.
 
-![](assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/caos.jpg)
+![](/assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/caos.jpg)
 
 Vamos a intentar recortar la cantidad de herramientas abiertas para que sea más sencillo y productivo avanzar en nuestro proyecto con una serie de post.
 
@@ -48,7 +48,7 @@ vsts -h
 vsts code -h
 ```
 
-![](assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/help.jpg)
+![](/assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/help.jpg)
 
 ### Iniciando sesión
 
@@ -99,7 +99,7 @@ Incrementa el nivel de detalle. Pero sin datos de depuración, usa ``--debug`` p
 
 Ya tenemos todo listo para realizar consultas y obtener la información que nos interesa, para ello disponemos de la sección [**Reference** de la documentación](https://docs.microsoft.com/en-us/cli/vsts/get-started?view=vsts-cli-latest).
 
-![](assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/references.jpg)
+![](/assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/references.jpg)
 
 Algunos ejemplos:
 
@@ -109,7 +109,7 @@ Algunos ejemplos:
     vsts code pr list -p PROYECTO -o table
     ```
 
-    ![](assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/example1.jpg)
+    ![](/assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/example1.jpg)
 
 - Abrir una *Pull Request* en el navegador:
 
@@ -123,7 +123,7 @@ Algunos ejemplos:
     vsts code pr set-vote --id 5661 --vote approve -o table
     ```
 
-    ![](assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/example3.jpg)
+    ![](/assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/example3.jpg)
 
 - Ver un listado de todos los repositorios de un proyecto:
 
@@ -131,7 +131,7 @@ Algunos ejemplos:
     vsts code repo list -p PROYECTO -o table
     ```
 
-    ![](assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/example4.jpg)
+    ![](/assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/example4.jpg)
 
 - Ver un listado de todos los proyectos del equipo:
 
@@ -139,7 +139,7 @@ Algunos ejemplos:
     vsts project list -o table
     ```
 
-    ![](assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/example5.jpg)
+    ![](/assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/example5.jpg)
 
 - Crear un *Work Item* en un proyecto:
 
@@ -183,4 +183,4 @@ A continuación, abrimos Visual Studio y podremos desde el menú *View -> Other 
 
 Desde esta ventana podremos ejecutar cualquier comando de `git` o `vsts`.
 
-![](assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/powershellinteractivewindow.jpg)
+![](/assets/images/posts/2017-12-07-visual-studio-team-services-desde-terminal/powershellinteractivewindow.jpg)

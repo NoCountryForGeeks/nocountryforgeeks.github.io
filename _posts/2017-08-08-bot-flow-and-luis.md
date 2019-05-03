@@ -62,7 +62,7 @@ Para que los diálogos fluyan adecuadamente y nuestro modelo de LUIS funcione de
 
 A continuación, vamos a analizar un diagrama diseñado a partir del flujo conversacional de este blog:
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/flowbotgeeksteam.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/flowbotgeeksteam.jpg)
 
 El **flujo del diálogo inicial** sería el siguiente:
 
@@ -78,33 +78,33 @@ Debemos evitar los bucles infinitos, por ello, en el ***intent NONE*** se puede 
 
 Necesitamos tener una cuenta en luis.ai para poder empezar. En cuanto tengamos la cuenta, vamos a seleccionar a **My apps**, en el menú principal, y nos crearemos una nueva aplicación de LUIS configurándolo con un nombre, descripción e idioma.
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/createnewapp.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/createnewapp.jpg)
 
 ## Intents
 
 Con la app creada, nos dirigiremos al menú lateral del Dashboard para comenzar a añadir *intents*. Personalmente, prefiero crear todos los *intents* con sendas *utterances*. Así tengo una visión global de cómo puede ir quedando nuestro modelo.
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/createfirstintent.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/createfirstintent.jpg)
 
 El resultado sería algo así:
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/intents.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/intents.jpg)
 
 Es recomendable que se vaya entrenando a medida que vamos creando los *intents*  y las *utterances*, de esta manera será más sencillo controlar el *score* en cada entrenamiento. El entrenamiento lo encontrarás en el menú lateral como _**"Test your application"**_.
 
 Como puede observarse en la siguiente imagen, esta *utterance "hola!"* está respondiendo con el máximo *score* posible y, además, con  bastante diferencia entre este primer *score* y el siguiente. Gracias a esta gran diferencia entre *scores* evitaremos que los *intents* se pisen entre ellos.
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/firsttraining.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/firsttraining.jpg)
 
 La mejor forma de recibir un *score* alto por cada *intent*, es la de generar *utterances* con un patrón muy similar por cada uno de ellos. Puede resultar algo tedioso añadir tantas *utterances* tan similares, pero la creación de un buen modelo de LUIS nos evitará muchos quebraderos de cabeza en la fase de desarrollo.
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/firstutterancestrained.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/firstutterancestrained.jpg)
 
 ## Entities
 
 Existen diferentes tipos de *entities*. Según cómo sea la complejidad de nuestro modelo de LUIS, pondremos uno u otro. A continuación voy a comentar  los tipos  que hemos ido utilizado en nuestro modelo.
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/firstentitylist.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/firstentitylist.jpg)
 
 
 ### Entity List
@@ -113,7 +113,7 @@ Por ejemplo, en las categorías hemos usado una *entity* de tipo **lista**. Esta
 
 En la siguiente imagen, como usuario, si le pido al bot que me de los posts que tenga sobre *LUIS*, nuestro bot recibirá el mismo *score* y la misma *entity* que si le pido que me de los posts que tenga sobre *Language Understanding Intelligent Service*.
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/entitykindcanonical.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/entitykindcanonical.jpg)
 
 Ahora que tenemos una *entity* tipo lista configurada, es la hora de añadir más *utterances* para entrenar a nuestro modelo de LUIS. En la siguiente imagen hemos añadido dos *utterances* más. A través del siguiente comboBox, podremos ver las etiquetas que reconoce LUIS.
 
@@ -125,7 +125,7 @@ Si os fijáis, las opciones de visualización son las siguientes:
 
 * **Composite entities**: Esta visualización de etiquetas la veremos más adelante, pero aquí muestra unas *entities* compuestas.
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/viewentitylabel.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/viewentitylabel.jpg)
 
 ### Entity Pre-built
 
@@ -133,7 +133,7 @@ Antes de explicar las *entities Composite*, voy a comentar otro tipo de *entitie
 
 Para estre proyecto vamos a utilizar únicamente la *Pre-built* de *number*. Me hubiese gustado añadirle la *Pre-built* de *Datetime*, pero ya han sacado la *v2* y aún no está disponible en español.
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/entityprebuild.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/entityprebuild.jpg)
 
 ### Entity Composite
 
@@ -147,17 +147,17 @@ Gracias a este tipo de *entity*, si el usuario pide los post que se publicaron e
 
 Una única *entity composite DateTimeComposite* que contiene una *entity Pre-built number* **(tercera)**  **+**  *entity DateTime* con un valor canónico de *"Week"*  **(semana)** **+** *entity DateTimeMonth* con un valor canónico de *"January"* **(enero)**.
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/entitycomposite.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/entitycomposite.jpg)
 
 Como hemos visto antes, una vez tengamos creadas todas las *entities* que componen esta *Composite*, tendremos que añadir *utterances* y entrenar a nuestro modelo de LUIS.
 
 Cuando añadimos una *utterance*, normalmente LUIS solo reconoce las *entities*. Para indicar que es una *Composite entity* tendremos que pulsar sobre la *entity* detectada en la *utterance*, borrar todas las etiquetas que te muestra y añadir nuestra *Composite* (normalmente te sugiere que la añadas).
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/removelabelstocomposite.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/removelabelstocomposite.jpg)
 
 El resultado de una *entity Composite* sería el siguiente, en sus tres visualizaciones:
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/utterancecompositesample.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/utterancecompositesample.jpg)
 
 ## ¿Cómo publicar la App?
 
@@ -166,7 +166,7 @@ Es importante que haya sido entrenado antes de publicarla.
 
 En cuanto lo publiquemos por primera vez, se generará un Endpoint url para hacer nuestras llamadas GET .
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/publish.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/publish.jpg)
 
 ## Postman
 
@@ -176,7 +176,7 @@ Vamos a hacer unas pruebas a ver qué nos devuelve el modelo recién creado. Seg
 
 **Resultado:** Un *intent post* con un 0,9 de *score* y con una *entity Category* de un valor canónico *"CSharp"*
 
-![](assets/images/posts/2017-08-08-code-flow-and-luis/getutterance.jpg)
+![](/assets/images/posts/2017-08-08-code-flow-and-luis/getutterance.jpg)
 
 Ahora vamos a ver cómo nos devolvería la información de una ***entity composite***:
 

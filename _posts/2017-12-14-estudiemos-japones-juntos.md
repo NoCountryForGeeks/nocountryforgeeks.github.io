@@ -43,11 +43,11 @@ Como se ha comentado previamente el objetivo es superar el JLPT nivel 2. **_¿Qu
 
 En la página oficial del [JLPT](http://www.jlpt.jp/e/) podemos encontrar el siguiente cuadro donde se nos muestra la estructura del examen en cuestión:
 
-![jlpt-levels](assets/images/posts/2017-12-14-estudiemos-japones-juntos/jlpt-levels.png)
+![jlpt-levels](/assets/images/posts/2017-12-14-estudiemos-japones-juntos/jlpt-levels.png)
 
 Así mismo, se nos presenta un otro cuadro informativo con cada una de estas secciones más detalladas
 
-![jlpt-exam](assets/images/posts/2017-12-14-estudiemos-japones-juntos/jlpt-exam.png)
+![jlpt-exam](/assets/images/posts/2017-12-14-estudiemos-japones-juntos/jlpt-exam.png)
 
 Todo objetivo tiene que cumplir una serie de condicionantes para que realmente sea un objetivo y no una quimera. Uno de esos condicionantes es fijar una fecha límite para su cumplimiento. Actualmente se realizan dos convocatorias anuales del _JLPT_: una durante la primera semana de julio y otra durante la primera semana de diciembre. Nuestro objetivo es presentarnos al examen en **DICIEMBRE DE 2018**.
 
@@ -71,15 +71,15 @@ Estos libros recorren el aprendizaje de _Kanji_ que realiza un niño japonés de
 
 En total la colección son de 10 libros y un recopilatorio; pero, nosotros, utilizaremos los nueve primeros, ya que con ellos abarcaremos la totalidad de _Kanji_ que se exigen para el **JLPT 2**.
 
-![Kanken](assets/images/posts/2017-12-14-estudiemos-japones-juntos/kanken.jpg)
+![Kanken](/assets/images/posts/2017-12-14-estudiemos-japones-juntos/kanken.jpg)
 
-![Kanken-inside](assets/images/posts/2017-12-14-estudiemos-japones-juntos/kanken-inside.jpg)
+![Kanken-inside](/assets/images/posts/2017-12-14-estudiemos-japones-juntos/kanken-inside.jpg)
 
 Así mismo, la colección tiene un cuadernillo de trabajo para cada uno de los tomos, que nos proporcionará ejemplos de palabras y expresiones para asociar con los _Kanji_ que vayamos aprendiendo:
 
-![Workbook](assets/images/posts/2017-12-14-estudiemos-japones-juntos/workbook.jpg)
+![Workbook](/assets/images/posts/2017-12-14-estudiemos-japones-juntos/workbook.jpg)
 
-![workbook-inside](assets/images/posts/2017-12-14-estudiemos-japones-juntos/workbook-inside.jpg)
+![workbook-inside](/assets/images/posts/2017-12-14-estudiemos-japones-juntos/workbook-inside.jpg)
 
 Igualmente, nos servirán de apoyo otros libros y herramientas como:
 

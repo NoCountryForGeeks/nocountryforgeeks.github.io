@@ -13,11 +13,11 @@ author: maktub82
 
 Cuando trabajamos con **aplicaciones UWP** y utilizamos el WebView podemos estar seguros de que la mayoría de páginas webs van a funcionar sin ningún problema, ya que por debajo el WebView **utiliza la última versión de Microsoft Edge, en mi caso Edge 14**.
 
-![Edge 14](assets/images/posts/2017-11-07-version-ie/ie14.png)
+![Edge 14](/assets/images/posts/2017-11-07-version-ie/ie14.png)
 
 **Pero no ocurre lo mismo cuando creamos una aplicación WPF.** En la mayoría de casos las páginas no se visualizarán correctamente e incluso obtendremos errores de JavaScript ya que **el WebBrowser utiliza una versión antigua de Internet Explorer, IE7**.
 
-![Js Error](assets/images/posts/2017-11-07-version-ie/js-error.png)
+![Js Error](/assets/images/posts/2017-11-07-version-ie/js-error.png)
 
 Por suerte, dada la gran flexibilidad que nos brinda WPF, **podemos cambiar la versión del Internet Explorer** que debe utilizar el WebBrowser de WPF. Para ello **necesitamos modificar el registro de Windows**.
 
@@ -136,25 +136,25 @@ Vamos a probar la aplicación con diferentes versiones de Internet Explorer. Par
 
 En este caso seguimos obteniendo un error de JavaScript.
 
-![IE9](assets/images/posts/2017-11-07-version-ie/js-error.png)
+![IE9](/assets/images/posts/2017-11-07-version-ie/js-error.png)
 
 ### Internet Explorer 10 - 0x00002711
 
 En este caso ha desaparecido el error de JavaScript y podemos ver que se ejecuta el WebBrowser como Internet Explorer 10.
 
-![IE10](assets/images/posts/2017-11-07-version-ie/ie10.png)
+![IE10](/assets/images/posts/2017-11-07-version-ie/ie10.png)
 
 ### Internet Explorer 11 - 0x00002AF9
 
 Como podemos ver, ahora la web nos indica que estamos utilizando Internet Explorer 11.
 
-![IE11](assets/images/posts/2017-11-07-version-ie/ie11.png)
+![IE11](/assets/images/posts/2017-11-07-version-ie/ie11.png)
 
 ### Microsoft Edge 14 - 0x00002EE1
 
 Con este cambio conseguimos que el WebBrowser utilice Microsoft Edge.
 
-![IE14](assets/images/posts/2017-11-07-version-ie/ie14.png)
+![IE14](/assets/images/posts/2017-11-07-version-ie/ie14.png)
 
 ## Conclusiones
 
