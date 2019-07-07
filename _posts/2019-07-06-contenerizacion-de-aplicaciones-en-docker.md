@@ -13,7 +13,7 @@ author: jgarcia
 
 # Contenerización con Docker
 
-Antes de empezar con el tema en cuestión me gustaría agradecer a los amigos de **"No Country For Geeks"** el haberme invitado a realizar una publicación en su blog. Como yo también soy un seguidor de éste sitio se de buena tinta la calidad de los contenidos que se publican, así que espero que no me puedan los nervios y estar a la altura. Para los que se pregunten quién soy, pues decir que no soy más que un Murcianico con la inquietud de aprender continuamente nuevas tecnologías que pueda aplicar a lo que es mi hobby y al mismo tiempo mi profesión, el desarrollo de software. Y sin enrollarme más en contar mi vida comencemos con la contenerización de aplicaciones en Docker, que es a lo que hemos venido. 
+Antes de empezar con el tema en cuestión me gustaría agradecer a los amigos de **"No Country For Geeks"** el haberme invitado a realizar una publicación en su blog. Como yo también soy un seguidor de este sitio sé de buena tinta la calidad de los contenidos que se publican, así que espero que no me puedan los nervios y estar a la altura. Para los que se pregunten quién soy, pues decir que no soy más que un Murcianico con la inquietud de aprender continuamente nuevas tecnologías que pueda aplicar a lo que es mi hobby y al mismo tiempo mi profesión, el desarrollo de software. Y sin enrollarme más en contar mi vida comencemos con la contenerización de aplicaciones en Docker, que es a lo que hemos venido. 
 
 La vida del desarrollador es demasiado corta como para perder el tiempo entre compilación y despliegue, en comprobar y mantener estable la perfecta armonía de librerías de código en la que un simple cambio de versión puede destruirte el edificio por los cimientos. Pues aquí vengo a enseñaros la contenerización de aplicaciones usando [Docker](https://www.docker.com/), una herramienta que alargará la esperanza de vida del programador medio al menos un poco.
 
@@ -29,7 +29,7 @@ Como los recursos están compartidos, ya que los contenedores comparten Sistema 
 
 ![](http://mindbodyncode.com/wp-content/uploads/2019/06/docker-container-architecture-1024x575.jpg)
 
-Al ejecutarse sobre una máquina virtual, la portabilidad entre distintos tipos de máquina es posible. Por lo que un contenedor de aplicación puede ejecutarse en cualquier sistema sin requerir cambios en el código. Más o menos con estos detalles ya podríamos entender como funciona la contenerización, a partir de aquí hablaremos específicamente de Docker, por ser el más popular y el que más empresas están adaptando en su sistema.
+Al ejecutarse sobre una máquina virtual, la portabilidad entre distintos tipos de máquina es posible. Por lo que un contenedor de aplicación puede ejecutarse en cualquier sistema sin requerir cambios en el código, tan solo tendríamos inconvenientes al intentar ejecutar un contenedor Windows sobre un sistema operativo Linux. Más o menos con estos detalles ya podríamos entender como funciona la contenerización, a partir de aquí hablaremos específicamente de Docker, por ser el más popular y el que más empresas están adaptando en su sistema.
 
 ## ¿Qué es Docker?
 
@@ -47,11 +47,11 @@ Para concluir esta sección recapitulemos que características nos aporta Docker
 
 1.  **Desarrollar** aplicaciones usando contenedores, con todos sus beneficios.
 2.  **Testear** usando contenedores, mediante imágenes previamente configuradas.
-3.  **Llegar a producción**  con contenedores, sin embargo necesitaremos el uso de  [orquestadores](https://docs.microsoft.com/es-es/dotnet/standard/microservices-architecture/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications).
+3.  **Llegar a producción**  con contenedores, donde es recomendable el uso de [orquestadores](https://docs.microsoft.com/es-es/dotnet/standard/microservices-architecture/architect-microservice-container-applications/scalable-available-multi-container-microservice-applications) para aprovechar todo el potencial de los contenedores.
 
 ## Primeros pasos
 
-Pues para empezar, como es obvio, será descargarnos e instalarnos  [Docker Desktop](https://docs.docker.com/docker-for-windows/install/), la aplicación de escritorio de Docker en nuestro ordenador para empezar a trastear con contenedores. En el enlace que he añadido para Docker Desktop se muestran ambas versiones tanto para Windows como para Mac. Todos los ejemplos que mostraré serán bajo un sistema Windows, pero como ya he comentado antes en Docker no importa el sistema operativo que uses, tus aplicaciones funcionarán, pero si que es verdad que la instalación base del cliente de Docker puede ser diferente según qué plataforma. Aun así el mismo enlace que he puesto (De la página oficial de Docker) explica detalladamente como instalarnos Docker en nuestra máquina paso por paso y de forma muy sencilla, por lo que no me detendré en todos los detalles de la instalación.
+Pues para empezar, como es obvio, será descargarnos e instalarnos  [Docker Desktop](https://docs.docker.com/docker-for-windows/install/), la aplicación de escritorio de Docker en nuestro ordenador para empezar a trastear con contenedores. En el enlace que he añadido para Docker Desktop se muestran ambas versiones tanto para Windows como para Mac. Todos los ejemplos que mostraré serán bajo un sistema Windows, sobre el que pueden ser ejectuados contenedores tanto Windows como Linux, sin embargo en un Sistema Operativo Linux solo pueden ser lanzados contenedores Linux. Además la instalación base del cliente de Docker puede ser diferente según qué plataforma. Aun así el mismo enlace que he puesto (De la página oficial de Docker) explica detalladamente como instalarnos Docker en nuestra máquina paso por paso y de forma muy sencilla, por lo que no me detendré en todos los detalles de la instalación.
 
 _**Nota**_:  _Existe una versión anterior del cliente de Docker para Windows llamada  **[Docker ToolBox](https://docs.docker.com/toolbox/toolbox_install_windows/)**_.  _Es posible que tengáis que utilizarla si vuestro sistema operativo Windows no es la versión Pro, Enterprise o Education. ¿Porque? Pues sencillamente porque la versión de Docker Desktop utiliza como hipervirtualizador  [Hyper-V](https://es.wikipedia.org/wiki/Hyper-V)_,  _y éste tan solo se encuentra en estas versiones de Windows._
 
@@ -83,7 +83,7 @@ Los requisitos de red de las aplicaciones y el propio entorno de la red puede re
 
 Aun así esto no significa que no podamos configurar  **nuestras direcciones de red o aplicar un cifrado en la capa de red o incluso usar descubrimiento de servicios**. Más adelante en otro articulo, es posible que os enseñe algunas de las cosas que se pueden configurar con las interfaces de red, de momento continuemos con lo básico de Docker.
 
-#### Volumenes
+#### Volúmenes
 
 Un volumen es un mecanismo que permite persistir datos en contenedores, lo ideal es que los contenedores no contengan estado alguno de nuestras aplicaciones, ya que un contenedor es un ente que está destinado a morir, los contenedores mueren y vuelven a instanciarse con la ayuda de  **orquestadores**. Y no solo eso, si no que además es posible arrancar varias instancias de un mismo contenedor y balancear la carga de trabajo entre ellos. Es por esto por lo que no es recomendable que los contenedores contengan estado o configuración de direcciones IP estáticas.
 
@@ -287,15 +287,3 @@ Aquí terminamos este primer ejemplo de contenerización de aplicaciones con Doc
 Tan solo hemos vislumbrado un poco la punta del iceberg en éste post, la contenerización de aplicaciones abarca varios aspectos a parte de tan solo contenerizar una aplicación ya compilada. Y además existen herramientas hoy en día que están muy bien integradas con contenedores Docker, como puede ser el propio  **[Visual Studio 2019](https://visualstudio.microsoft.com/es/vs/)**, con el que es posible contenerizar aplicaciones pulsando un simple ‘_click_‘, generando automáticamente el Dockerfile, la imagen y ejecutarla en un contenedor de una forma muy sencilla. Pero por supuesto antes de montar en bici tenemos que aprender a caminar, por eso es por lo que recomiendo que una vez que estés acostumbrado a contenerizar aplicaciones con comandos nos pasemos a la «magia» de los IDE.
 
 En otros post que seguiré publicando sobre Docker, enseñare esto último que os he comentado con Visual Studio, y el uso de orquestadores. Con esto me despido, ¡Un saludo a todos los aventureros del aprendizaje!
-
-
-
-
-
-
-
- 
-
-
-
-
