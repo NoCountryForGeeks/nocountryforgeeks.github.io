@@ -3,16 +3,15 @@ layout: post
 current: post
 cover: assets/images/posts/2019-07-06-contenerizacion-de-aplicaciones-en-docker/header.png
 navigation: True
-title: "contenerización de aplicaciones en Docker"
+title: "Contenerización de aplicaciones en Docker"
 date: 2019-07-06 12:00:00
-tags: nocountryforgeeks
+tags: Docker Containers
 class: post-template
 subclass: 'post'
 author: jgarcia
 ---
 
-![](http://mindbodyncode.com/wp-content/uploads/2019/06/Docker-Horizontal-Large-1205x318.png)
-# Contenerización de aplicaciones en Docker
+# Contenerización con Docker
 
 Antes de empezar con el tema en cuestión me gustaría agradecer a los amigos de **"No Country For Geeks"** el haberme invitado a realizar una publicación en su blog. Como yo también soy un seguidor de éste sitio se de buena tinta la calidad de los contenidos que se publican, así que espero que no me puedan los nervios y estar a la altura. Para los que se pregunten quién soy, pues decir que no soy más que un Murcianico con la inquietud de aprender continuamente nuevas tecnologías que pueda aplicar a lo que es mi hobby y al mismo tiempo mi profesión, el desarrollo de software. Y sin enrollarme más en contar mi vida comencemos con la contenerización de aplicaciones en Docker, que es a lo que hemos venido. 
 
