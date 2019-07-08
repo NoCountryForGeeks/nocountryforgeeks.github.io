@@ -39,7 +39,7 @@ Se trata de una plataforma libre para desarrollar y ejecutar aplicaciones en con
 
 Esto nos ofrece una versatilidad a la hora de desarrollar increíble, se pueden lanzar tanto nuestras aplicaciones propias en cualquier tecnología y comunicarlas con otros contenedores con diversos servicios de infraestructura sin necesidad de instalarlos en nuestra máquina, y si además te digo que ni siquiera tendrías que decirle o configurar en profundidad (Siempre que no quieras o no lo necesites) la instancia de SQL server que pudieras tener, ya que gracias al repositorio  [DockerHub](https://hub.docker.com/), en el cual se encuentran de manera libre miles de  **imágenes**  **Docker** con diversos servicios, bastaría con indicarle qué imagen queremos usar y el solito se la descargaría, instalaría, y configuraría la base para poder funcionar, y tu solo tendrías que decirle el puerto en el que quieres dicho servicio a través del contenedor.
 
-Hablamos de una reducción de los tiempos entre los que un desarrollador implementa una nueva funcionalidad y la llegada de dicha feature a producción se reducirían notoriamente. Siempre y cuando nuestro destino final en producción esté contenerizado claro, que si éste es nuestro objetivo y tenemos un sistema grande, distribuido y complejo, no es tarea sencilla seamos sinceros. Esta herramienta es la que antes comentaba que ampliaría la vida media del desarrollador, o por lo menos la hace más llevadera.
+Hablamos de una reducción de los tiempos entre los que un desarrollador implementa una nueva funcionalidad y la llegada de dicha _feature_ a producción se reducirían notoriamente. Siempre y cuando nuestro destino final en producción esté contenerizado claro, que si éste es nuestro objetivo y tenemos un sistema grande, distribuido y complejo, no es tarea sencilla seamos sinceros. Esta herramienta es la que antes comentaba que ampliaría la vida media del desarrollador, o por lo menos la hace más llevadera.
 
 Como bien comentaba Docker nos permite ejecutar  **N**  aplicaciones simultáneamente en un host en base a contenedores, y además podríamos hacer una jerarquía de dependencias entre aplicaciones, es decir, si nuestra aplicación  **A** necesita de otra aplicación  **B**  para funcionar, podemos configurar mediante Docker y establecer que antes de ejecutar  **A**  se espere y lance previamente el contenedor  **B**. Con ésto se acabo la rutina diaria de alguien está tocando el servidor compartido y mientras realiza su tarea esta dejando sin entorno de trabajo a los demás desarrolladores (Donde seguro que aprovecharán todos para tomarse un café), cada desarrollador podría lanzar su aplicación con una dependencia a una imagen configurada del servidor y cada uno desde su máquina local.
 
@@ -53,7 +53,7 @@ Para concluir esta sección recapitulemos que características nos aporta Docker
 
 Pues para empezar, como es obvio, será descargarnos e instalarnos  [Docker Desktop](https://docs.docker.com/docker-for-windows/install/), la aplicación de escritorio de Docker en nuestro ordenador para empezar a trastear con contenedores. En el enlace que he añadido para Docker Desktop se muestran ambas versiones tanto para Windows como para Mac. Todos los ejemplos que mostraré serán bajo un sistema Windows, sobre el que pueden ser ejectuados contenedores tanto Windows como Linux, sin embargo en un Sistema Operativo Linux solo pueden ser lanzados contenedores Linux. Además la instalación base del cliente de Docker puede ser diferente según qué plataforma. Aun así el mismo enlace que he puesto (De la página oficial de Docker) explica detalladamente como instalarnos Docker en nuestra máquina paso por paso y de forma muy sencilla, por lo que no me detendré en todos los detalles de la instalación.
 
-_**Nota**_:  _Existe una versión anterior del cliente de Docker para Windows llamada  **[Docker ToolBox](https://docs.docker.com/toolbox/toolbox_install_windows/)**_.  _Es posible que tengáis que utilizarla si vuestro sistema operativo Windows no es la versión Pro, Enterprise o Education. ¿Porque? Pues sencillamente porque la versión de Docker Desktop utiliza como hipervirtualizador  [Hyper-V](https://es.wikipedia.org/wiki/Hyper-V)_,  _y éste tan solo se encuentra en estas versiones de Windows._
+_**Nota**_:  _Existe una versión anterior del cliente de Docker para Windows llamada  **[Docker ToolBox](https://docs.docker.com/toolbox/toolbox_install_windows/)**_.  _Es posible que tengáis que utilizarla si vuestro sistema operativo Windows no es la versión Pro, Enterprise o Education. ¿Por qué? Pues sencillamente porque la versión de Docker Desktop utiliza como hipervirtualizador  [Hyper-V](https://es.wikipedia.org/wiki/Hyper-V)_,  _y éste tan solo se encuentra en estas versiones de Windows._
 
 **_¡Nota_** **aún más importante!**:  _Si por lo que sea os instaláis Docker ToolBox, ya sea por error, por probar o porque no te queda más remedio. Y después os pasáis a Docker Desktop, la instalación previa de Docker ToolBox os creará unas variables de entorno que necesitará para poder funcionar, sin embargo, la versión nueva de Docker Desktop no necesita de dichas variables de entorno, y si por lo que sea pasáis de uno a otro esas variables de entorno convertirán vuestra vida en un infierno. Tenedlo en cuenta y_ **_¡Borradlas!_**
 
@@ -92,8 +92,9 @@ Así el acceso a los contenedores a través de la red se realiza mediante técni
 ### Primera aplicación a contenerizar
 
 Antes de nada vamos a comprobar que nuestra instalación de Docker funciona correctamente, y para ello vamos a ejecutar el siguiente comando sobre el cmd de nuestra máquina:
-
+```bash
     docker run hello-world
+```
   
   Y si todo ha salido como debería de ser, aparecerán los siguientes mensajes:
 
@@ -102,7 +103,7 @@ Antes de nada vamos a comprobar que nuestra instalación de Docker funciona corr
 Siguiendo un poco la trazabilidad de los mensajes lo que ha ocurrido es lo siguiente:
 
 1.  Ha buscado si la imagen ‘_hello-world_‘ ya la tenía creada localmente la maquina host de Docker.
-2.  Al no ser así, ha buscado una imagen con el mismo nombre en el repositorio público  **DockerHub**, en éste caso si que la ha encontrado y se dispone a descargársela.
+2.  Al no ser así, ha buscado una imagen con el mismo nombre en el repositorio público  **DockerHub**, en este caso si que la ha encontrado y se dispone a descargársela.
 3.  Una vez finalizada la descarga de la imagen, Docker creará una instancia en un contenedor de esta misma y la ejecutará. Donde los últimos mensajes mostrados provienen de la misma aplicación descargada, en los que se detalla todo el proceso de comunicación en el cliente de Docker entre el CLI y la interfaz que ya os comenté.
 
 Es importante que se entienda que la imagen ‘_hello-world_‘ es una imagen que yo no he creado y que no está en mi dispositivo local, es una imagen ya creada en el repositorio de  **DockerHub**  y la cual yo puedo usar a base de un simple comando. De la misma forma que me he descargado esta imagen que tan solo es un ejemplo, podría descargar y utilizar de forma similar una imagen de una caché  **Redis**  usando el mismo comando pero con el nombre de imagen ‘_redis_‘.
@@ -110,7 +111,7 @@ Es importante que se entienda que la imagen ‘_hello-world_‘ es una imagen qu
 Continuamos creando una aplicación  **.Net Core** muy sencilla en la que solo estableceremos un controlador que devolverá una cadena de texto con un mensaje, esta será la aplicación que se contenerizara a continuación.
 
 **Program.cs**
-
+```csharp
     public class Program
     {
         public static void Main(string[] args)
@@ -122,9 +123,9 @@ Continuamos creando una aplicación  **.Net Core** muy sencilla en la que solo e
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>();
     }
-
+```
 **Startup.cs**
-
+```csharp
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -157,9 +158,9 @@ Continuamos creando una aplicación  **.Net Core** muy sencilla en la que solo e
             app.UseMvc();
         }
     }
-
+```
 **GreetingsController.cs**
-
+```csharp
     [Route("api/[controller]")]
     [ApiController]
     public class GreetingsController : ControllerBase
@@ -171,11 +172,11 @@ Continuamos creando una aplicación  **.Net Core** muy sencilla en la que solo e
             return "Greetings developer! I´m a contanerized API :)";
         }
     }
-
+```
 Como se puede apreciar es un proyecto  **.Net Core**  sencillo con un simple controlador  _**GreetingsController**_, con una llamada GET en la que devolverá un mensaje de texto saludando al desarrollador que realice tal petición. A continuación lo que vamos a hacer es publicar nuestra aplicación en una carpeta, dejándola lista para ser desplegada en servicios de hosting. Para ello ejecutamos el siguiente comando:
-
+```bash
     dotnet publish "ContanerizedVisits.csproj" -c Release -o ./publish
-
+```
 Ejecutando el comando anterior en la ruta en la que se encuentre el proyecto, lo que estamos haciendo es compilando la aplicación con la configuración establecida en el perfil de  _**Release**_  y dejando el conjunto de librerías compiladas en la carpeta ubicada en la misma ruta denominada  _**publish**_. Al ejecutar el comando deberíamos de ver por consola la siguiente salida (Si todo ha ido correctamente):
 
 ![](http://mindbodyncode.com/wp-content/uploads/2019/06/publishContanerizedApp-1024x121.png)
@@ -215,9 +216,9 @@ Existe una cantidad variada de comandos de configuración que se pueden establec
 **COPY**. Realiza la acción de copiar desde nuestro sistema de ficheros local, partiendo desde la ruta en la que se encuentre el Dockerfile, hacia el sistema de ficheros del contenedor. En este caso estamos copiando todos los ficheros generados en la publicación ubicados en la carpeta  _**./publish**_, y transferirlos a la base del directorio de trabajo del contenedor  _**/app**_.
 
 **ENTRYPOINT**. Con ésta instrucción lo que estamos haciendo es establecer que nuestra aplicación pueda ser ejecutada desde el cliente de Docker, y para ello le indicamos el punto de entrada a la imagen generada desde donde se puede lanzar la aplicación como un ejecutable. Por esto se le especifica en nuestra situación que el punto de entrada será  **«dotnet»**  junto con la librería base de nuestra aplicación  **«ContanerizedVisits.dll»**, para que cuando le digamos a Docker que queremos una instancia de ésta aplicación el internamente sepa como arrancar la imagen ejecutando:
-
+```bash
     dotnet ContanerizedVisits.dll
-
+```
 Con todas estas configuraciones establecidas  **dentro del Dockerfile**  ya estaríamos listos para lanzar nuestra aplicación contenerizada.
 
 ### Creando la imagen Docker
@@ -229,9 +230,9 @@ Recapitulemos un poco antes de continuar, en este punto tendremos una estructura
 Tenemos la base del proyecto con los clases de  **Program.cs y Startup.cs**  para arranque y configuración de la aplicación, el controlador  **GreetingsController.cs**  con la llamada GET que devuelve una cadena de texto, la carpeta  **publish**  con la compilación del proyecto lista para ser contenerizada y el fichero  **Dockerfile** con todas las instrucciones necesarias para que Docker sepa como crear la imagen y ejecutarla. Con todos estos ingredientes listos pasamos a encender los fogones y poner la olla a hervir.
 
 Para crear la imagen Docker bastaría con ejecutar el siguiente comando:
-
+```bash
     docker build -t contanerizedvisitsimage .
-
+```
 Con la opción  **«-t»**  le estamos indicando que el nombre de la imagen sera el de  **«contanerizedvisitsimage»**  y el siguiente parámetro será la ruta donde se encuentre el proyecto junto con el Dockerfile, que en mi caso ya estaba ubicado en la misma ruta y por eso se nombra con  **«.»**.
 
 Si todo ha funcionado a la perfección deberíamos de obtener un resultado como el siguiente:
@@ -239,9 +240,9 @@ Si todo ha funcionado a la perfección deberíamos de obtener un resultado como 
 ![](http://mindbodyncode.com/wp-content/uploads/2019/06/dockerBuildContanerizedApp.png)
 
 Como vemos se puede ver paso por paso como va ejecutando todas las instrucciones puestas en el Dockerfile, y el resultado será una imagen Docker con nuestra aplicación a la que hemos denominado «**contanerizedvisitsimage**«. Comprobemos el resultado con el comando:
-
+```bash
     docker image ls
-
+```
 El cual nos muestra todas las imágenes que hemos creado con Docker.
 
 ![](http://mindbodyncode.com/wp-content/uploads/2019/06/dockerImageLs.png)
@@ -251,9 +252,9 @@ Tanto las imágenes de Docker como luego los contenedores serán identificados s
 ### Ejecutando el contenedor
 
 Una vez creada nuestra imagen procedemos al último paso, ejecutar la aplicación en un contenedor, y para ello tan solo nos bastaremos de lanzar el siguiente comando:
-
+```bash
     docker run -p 5500:80 contanerizedvisitsimage
-
+```
 Es tan simple como indicarle el puerto al que queremos publicar en el host local el que está utilizando internamente nuestra aplicación para que sea visible desde nuestra máquina, es decir, con  **«-p 5500:80»** estamos indicando que todo lo que vaya hacía el contenedor por el puerto 5500 sea dirigido dentro del contenedor al puerto 80.
 
 Recordemos que nosotros ya habíamos expuesto el puerto 80 en el Dockerfile, lo que sucede es que exponer el puerto significa que  **tu contenedor expone ese puerto pero no que desde tu máquina local (localhost o 127.0.0.1) puedas acceder a esa dirección**. Los contenedores cuando se crean se establecen por defecto con una dirección IP aleatoria gestionada por el  **CNM de Docker**, así que lo que estamos haciendo es básicamente que desde una llamada en el navegador hacía mi máquina local _**localhost:5500**_ me redirija hacía el contenedor en el puerto 80.
@@ -267,17 +268,17 @@ Indicando que nuestra aplicación se está ejecutando y la salida mostrada es la
 ![](http://mindbodyncode.com/wp-content/uploads/2019/06/exampleContanerizedAPI.png)
 
 Por si todavía no te lo crees que esta aplicación esta contenerizada vamos a ejecutar el siguiente comando:
-
+```bash
     docker ps
-
+```
 El cual te muestra todos los contenedores que existen en ejecución actualmente:
 
 ![](http://mindbodyncode.com/wp-content/uploads/2019/06/dockerPS-1024x53.png)
 
 Como vemos muestra cierta información de configuración que hemos ido añadiendo durante todo el proceso. Si ahora queremos parar el contenedor en ejecución bastará con ejecutar el comando:
-
+```bash
     docker stop recursing_gauss
-
+```
 Se puede apreciar como he utilizado el nombre aleatorio que te ofrece Docker para que una persona la cual está más acostumbrada a memorizar conceptos con significado en el lenguaje antes que Identificadores aleatorios pueda gestionar más fácilmente el uso de contenedores. De todas formas si eres más propenso a parecerte a una máquina también puedes utilizar el identificador para su gestión.
 
 ## Conclusión
