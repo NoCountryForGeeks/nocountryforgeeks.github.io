@@ -17,7 +17,7 @@ Llegas a la oficina. Como cada día, enciendes tu ordenador, revisas los correos
 
 Te preguntas, ¿Cómo es posible que al *Product Owner* se le ha olvidado incluir una descripción detallada?, ¿1 Jornada? Me parece poco.
 
-> Available in English [here](http://www.danielmartingonzalez.com/the-good-it-guy-readme.html).
+> Available in English [here](https://www.danielmartingonzalez.com/the-good-it-guy/).
 
 **Ryan, cazaba con su padre cuando era pequeño**. Era algo que le gustaba. La mezcla de naturaleza en estado puro, con la unión que conseguía en esas pocas horas que disfrutaba junto a su padre, le transmitía bastante serenidad y confianza en sí mismo. Aunque ahora vivía en la ciudad. Se sacó hace unos meses su permiso de armas para, siendo ahora el padre, disfrutar junto a su hijo de esos momentos que obtuvo cuando era niño. De paso, podría aprovechar el arma para, gracias a la segunda enmienda, proteger su casa ante cualquier asaltante que quisiese arrebatar la paz a su familia.
 
