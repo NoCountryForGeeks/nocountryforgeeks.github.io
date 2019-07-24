@@ -21,7 +21,7 @@ Si a esto le unimos el hecho de que odio tener muchas herramientas abiertas, que
 
 Vamos a intentar recortar la cantidad de herramientas abiertas para que sea más sencillo y productivo avanzar en nuestro proyecto con una serie de post.
 
-> Available in English [here](http://www.danielmartingonzalez.com/visual-studio-team-services-from-console-readme.html).
+> Available in English [here](https://www.danielmartingonzalez.com/visual-studio-team-services-from-console/).
 
 ## Microsoft Visual Studio Team Services CLI
 

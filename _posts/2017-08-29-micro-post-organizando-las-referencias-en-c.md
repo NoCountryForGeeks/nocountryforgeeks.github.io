@@ -13,7 +13,7 @@ author: danimart1991
 
 Hay muchas formas de mejorar nuestro código, algunas personas abogan por tener un código con una funcionalidad concreta y fiable, otros por un código limpio, y por qué no, otros simplemente por un código que funcione y punto.
 
-> Available in English [here](http://www.danielmartingonzalez.com/micro-post-organizing-the-references-in-your-classes-readme.html).
+> Available in English [here](https://www.danielmartingonzalez.com/micro-post-organizing-the-references-in-your-classes/).
 
 En **No Country For Geeks** creemos que el código tiene que ser arte, y no nos referimos a un cuadro abstracto que cada persona interprete de una manera; hablamos de una sinfonía en el que cada variable, cada método, cada línea, sea un compuesto de funcionalidad, belleza, simpleza y elegancia que alcancen la excelencia en lo posible.
 
@@ -30,7 +30,7 @@ Con **Visual Studio**, toda esta organización se puede hacer de una manera muy 
 
     ![](/assets/images/posts/2017-08-29-micro-post-organizando-las-referencias-en-tus-clases/system-options.png)
 
-2. Una vez estamos en una clase en la que queramos organizar las referencias, basta con utilizar un atajo de teclado poco conocido pero muy útil: *Ctrl+R, Ctrl+G*. Al hacerlo, veremos cómo se limpian las referencias no utilizadas en nuestra clase, las referencias a *System* se dispondrán en primera instancia en el listado, y todas las referencias se organizarán por orden alfabético. 
+2. Una vez estamos en una clase en la que queramos organizar las referencias, basta con utilizar un atajo de teclado poco conocido pero muy útil: *Ctrl+R, Ctrl+G*. Al hacerlo, veremos cómo se limpian las referencias no utilizadas en nuestra clase, las referencias a *System* se dispondrán en primera instancia en el listado, y todas las referencias se organizarán por orden alfabético.
 
     ![](/assets/images/posts/2017-08-29-micro-post-organizando-las-referencias-en-tus-clases/good-organization.png)
 
