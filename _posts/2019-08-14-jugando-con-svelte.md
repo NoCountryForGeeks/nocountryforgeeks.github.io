@@ -1,7 +1,7 @@
 ---
 layout: post
 current: post
-cover: assets/images/posts/2019-08-19-jugando-con-svelteassets/header.png
+cover: assets/images/posts/2019-08-14-jugando-con-svelte/header.png
 navigation: True
 title: "Jugando con svelte"
 date: 2019-08-14 12:00:00
