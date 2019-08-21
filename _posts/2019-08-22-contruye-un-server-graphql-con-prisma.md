@@ -4,7 +4,7 @@ current: post
 cover: assets/images/posts/2019-08-22-contruye-un-server-graphql-con-prisma/coverPage.jpg
 navigation: True
 title: 'Prisma: construye tu servidor GraphQL de una forma rápida y sencilla'
-date: 2019-07-22 12:00:00
+date: 2019-08-21 12:00:00
 tags: mongodb prisma graphql-yoga
 class: post-template
 subclass: 'post'
