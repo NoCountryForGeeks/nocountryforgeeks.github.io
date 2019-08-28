@@ -11,6 +11,7 @@ subclass: "post"
 author: franmolmedo
 ---
 
+Miles de películas por ver,
 Sí, otra _[librería / framework / ponga aquí el nombre que quiera]_ para ayudarnos en la tarea de realizar nuestras interfaces de usuario web utilizando javascript. ¿Por qué? ¿Para qué?. Parafraseando a San Agustín:
 
 > Por muy lejos que hayamos llegado, el ideal siempre estará más allá.
