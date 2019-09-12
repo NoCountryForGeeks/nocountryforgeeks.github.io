@@ -1,10 +1,10 @@
 ---
 layout: post
 current: post
-cover: assets/images/posts/2019-08-28-Hablamos-de-sistemas-recomendadores(1)/header.png
+cover: assets/images/posts/2019-08-28-Hablamos-de-sistemas-recomendadores(1)/header.jpeg
 navigation: True
 title: "Hablamos de... Sistemas recomendadores (1)"
-date: 2019-08-14 12:00:00
+date: 2019-09-18 12:00:00
 tags: python recommender-systems ai ml
 class: post-template
 subclass: "post"
