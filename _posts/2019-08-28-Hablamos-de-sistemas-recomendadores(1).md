@@ -1,20 +1,25 @@
 ---
 layout: post
 current: post
-cover: assets/images/posts/2019-08-28-Hablamos-de-sistemas-recomendadores(1)/header.jpeg
+cover: assets/images/posts/2019-10-02-Hablamos-de-sistemas-recomendadores(1)/header.jpeg
 navigation: True
 title: "Hablamos de... Sistemas recomendadores (1)"
-date: 2019-09-18 12:00:00
+date: 2019-10-02 12:00:00
 tags: python recommender-systems ai ml
 class: post-template
 subclass: "post"
 author: franmolmedo
 ---
 
-Miles de películas por ver,
-Sí, otra _[librería / framework / ponga aquí el nombre que quiera]_ para ayudarnos en la tarea de realizar nuestras interfaces de usuario web utilizando javascript. ¿Por qué? ¿Para qué?. Parafraseando a San Agustín:
+Cada día se estrenan nuevas películas en los cines, las plataformas de streaming presentan nuevos contenidos, cortos, documentales... en estos momentos el problema no es la existencia de material ni el acceso al mismo, sino que la cuestión radica en elegir, entre todo lo existente, aquello que nos pueda gustar más. Según decía _Sartre_:
 
-> Por muy lejos que hayamos llegado, el ideal siempre estará más allá.
+> Aquello que cada uno de nosotros es, en cada momento de su vida, es la suma de sus elecciones previas. El hombre es lo que decide ser.
+
+Quizás demasiado trascendental para lo que queremos tratar aquí, pero oye el elegir convenientemente qué ver un viernes noche puede marcarte el resto del fin de semana.
+
+Para ayudarnos con la dificil tarea de la elección aparecen los sistemas recomendadores.
+
+## Sistemas recomendadores
 
 Tenemos herramientas fiables que han demostrado su capacidad para ayudarnos a realizar esta tarea. Librerías como _React_ o frameworks como _Vue_ o _Angular_ deberían ser suficientes para satisfacer las necesidades de cualquier proyecto. Sin embargo, siempre existen otros enfoques que hay que analizar y que nos pueden aportar otra perspectiva a la hora de encarar nuestros proyectos. En este punto es donde entra **Svelte**.
 
