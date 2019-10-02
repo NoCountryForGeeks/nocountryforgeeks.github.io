@@ -24,7 +24,7 @@ Para ayudarnos con la dificil tarea de la elección aparecen los sistemas recome
 Los sistemas recomendadores constituyen una de las aplicaciones más extendidas y con mayor éxito en la aplicación de sistemas de _machine learning_ orientados a negocio. Actualmente, los sistemas recomendadores o sistemas de recomendación se aplican a gran escala en gran variedad de escenarios; como, por ejemplo, video bajo demanda (donde según el historial de visualización del usuario y las valoraciones que haya asignado a una película o serie vista, el sistema le recomendará nuevas películas o series a visualizar), streaming de audio (con un sistema parecido al comentado previamente), tiendas online (recomendación basada en el historial de productos comprado, en los intereses, en las visualizaciones, en lo que otros usuarios similares a ti han comprado o visualizado previamente…) y un largo etcétera. Por lo tanto, podemos aplicar sistemas recomendadores en aquellos escenarios donde muchos usuarios interactúen con muchos ítems. En conclusión, un sistema recomendador es un sistema que se encarga de filtrar datos existentes y recomendar a los usuarios los ítems más relevantes que se estiman para él.
 Profundizando en los ejemplos y , dependiendo del contexto en el que nos encontremos, los ítems pueden ser de tipos muy variados:
 
-- **Productos**: El ejemplo más claro que podemos citar es la tienda online de [Amazon](www.amazon.es). Cuando nos conectamos a nuestra cuenta, nos aparecerán secciones donde se nos recomiendan artículos dependiendo de nuestras preferencias (valoraciones, compras anteriores, visualizaciones …).
+- **Productos**: El ejemplo más claro que podemos citar es la tienda online de [Amazon](www.amazon.es). Cuando nos conectamos a nuestra cuenta, nos aparecerán secciones donde se nos recomiendan artículos dependiendo de nuestras preferencias (valoraciones, compras anteriores, visualizaciones …). _Amazon_ utiliza [DSSTNE](https://github.com/amzn/amazon-dsstne), librería de código abierto que permite construir sistemas recomendadores a partir de un conjunto de datos donde la mayoría de celdas (en una estructura de tablas) están vacías (___sparse data___), que es el tipo de datos que tendremos en la realidad.
 
  En la captura siguiente podemos ver como _Amazon_ nos recomienda productos que están relacionados con nuestro historial de navegación. Ellos controlan qué productos hemos visualizado y tratan de mostrarnos productos relacionados con ellos con el fin de captar nuestro interés. Recordemos que, en este contexto, captar el interés del usuario equivale a ventas, lo que a fin de cuentas es dinero.
 
@@ -52,7 +52,20 @@ Profundizando en los ejemplos y , dependiendo del contexto en el que nos encontr
 
 Anteriormente hemos estado hablado de los diferentes dominios sobre los que podemos intentar realizar recomendaciones. En este punto vamos a describir los distintos tipos de sistemas recomendadores que vamos a ir mostrando en esta y en sucesivas entradas. Estos tipos son:
 
-* **Basados en el contenido**: 
+* **Basados en el contenido**: En este tipo de sistemas lo que se busca es recomendarle al usuario ítems parecidos a otros que le gustó en el pasado. La clave de estos sistemas consiste en establecer en qué consiste el parecido entre ítems y como evaluar el grado de parecido entre dos ítems. Para medir la similitud se pueden utilizar diversos algoritmos y metodologías, como pueden ser, la [distancia euclídea](https://en.wikipedia.org/wiki/Euclidean_distance), el [coeficiente de correlación de Pearson](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)… Además de este cálculo de la similitud entre ítems, posteriormente el sistema tiene que establecer la predicción o recomendación, para lo cual se pueden utilizar otras técnicas como la suma ponderada de los diferentes atributos o incluso la regresión, ajustando el algoritmo según el feedback que se vaya obteniendo tras su puesta en marcha.
+
+  ![Content based](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/content-based.png)
+
+* **Basados en filtrado colaborativo**: Como hemos visto en el caso previo, se requiere tener información sobre los ítems y sobre los usuarios para poder establecer esa recomendación. Sin embargo, los sistemas recomendadores basados en filtrado colaborativo se basan en el comportamiento previo de los usuarios. Es decir, no se tiene en cuenta qué o cuál ítem es y sus características, sino que lo que se tiene en cuenta es la valoración que otros usuarios hayan hecho de ese ítem. Este enfoque representa la mayor ventaja y el mayor inconveniente de este método de recomendación. La ventaja es que puedes dar recomendaciones sin necesidad de establecer criterios sobre los ítems en sí mismos; y, la principal desventaja, es que no se puede realizar recomendaciones a nuevos usuarios ya que no han establecido ninguna valoración sobre ítems existentes y, además, priman aquellos ítems con más opiniones y dificulta la proliferación de nuevos ítems al tener menos cantidad de interacciones con usuarios.
+Generalmente, además, estos sistemas de recomendación se encuentran igualmente subdivididos en dos categorías:
+
+ * **Filtrado colaborativo basado en usuarios (user based collaborative filtering)**: En este caso buscamos usuarios que hayan valorado ítems de forma parecida a como lo ha hecho el usuario objetivo; y, a partir de ahí, se le presentarían al usuario objetivo ítems que no haya valorado pero que sí lo hayan hecho estos otros usuarios "_similares_".
+
+    ![User based collaborative filtering](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/ub-collaborative-filtering.png)
+
+  * **Filtrado colaborativo basada en la relación de ítems (item based collaborative filtering)**: Este caso propone darle la vuelta a lo que hemos presentado anteriormente.
+
+
 
 ## ¿Qué es Svelte?
 
