@@ -63,7 +63,10 @@ Generalmente, además, estos sistemas de recomendación se encuentran igualmente
 
     ![User based collaborative filtering](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/ub-collaborative-filtering.png)
 
-  * **Filtrado colaborativo basada en la relación de ítems (item based collaborative filtering)**: Este caso propone darle la vuelta a lo que hemos presentado anteriormente.
+  * **Filtrado colaborativo basada en la relación de ítems (item based collaborative filtering)**: Este caso propone darle la vuelta a lo que hemos presentado anteriormente. Se basa en la similitud entre ítems elaborada a partir de las valoraciones de los usuarios. Los ítems recomendados serán aquellos más similares a los que ya previamente hemos valorado. Este tipo de filtrado colaborativo presenta menos error que el anterior y además su rendimiento es superior, sobre todo en sistemas donde tenemos más usuarios que ítems, ya que las valoraciones de los ítems (en media) no van a cambiar tan rapidamente.
+
+    ![Item based collaborative filtering](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/ib-collaborative-filtering.png)
+
 
 
 
