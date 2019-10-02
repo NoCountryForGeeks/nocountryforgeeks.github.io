@@ -1,10 +1,10 @@
 ---
 layout: post
 current: post
-cover: assets/images/posts/2019-10-02-Hablamos-de-sistemas-recomendadores(1)/header.jpeg
+cover: assets/images/posts/2019-10-08-Hablamos-de-sistemas-recomendadores(1)/header.jpeg
 navigation: True
 title: "Hablamos de... Sistemas recomendadores (1)"
-date: 2019-10-02 12:00:00
+date: 2019-10-08 12:00:00
 tags: python recommender-systems ai ml
 class: post-template
 subclass: "post"
@@ -21,7 +21,38 @@ Para ayudarnos con la dificil tarea de la elección aparecen los sistemas recome
 
 ## Sistemas recomendadores
 
-Tenemos herramientas fiables que han demostrado su capacidad para ayudarnos a realizar esta tarea. Librerías como _React_ o frameworks como _Vue_ o _Angular_ deberían ser suficientes para satisfacer las necesidades de cualquier proyecto. Sin embargo, siempre existen otros enfoques que hay que analizar y que nos pueden aportar otra perspectiva a la hora de encarar nuestros proyectos. En este punto es donde entra **Svelte**.
+Los sistemas recomendadores constituyen una de las aplicaciones más extendidas y con mayor éxito en la aplicación de sistemas de _machine learning_ orientados a negocio. Actualmente, los sistemas recomendadores o sistemas de recomendación se aplican a gran escala en gran variedad de escenarios; como, por ejemplo, video bajo demanda (donde según el historial de visualización del usuario y las valoraciones que haya asignado a una película o serie vista, el sistema le recomendará nuevas películas o series a visualizar), streaming de audio (con un sistema parecido al comentado previamente), tiendas online (recomendación basada en el historial de productos comprado, en los intereses, en las visualizaciones, en lo que otros usuarios similares a ti han comprado o visualizado previamente…) y un largo etcétera. Por lo tanto, podemos aplicar sistemas recomendadores en aquellos escenarios donde muchos usuarios interactúen con muchos ítems. En conclusión, un sistema recomendador es un sistema que se encarga de filtrar datos existentes y recomendar a los usuarios los ítems más relevantes que se estiman para él.
+Profundizando en los ejemplos y , dependiendo del contexto en el que nos encontremos, los ítems pueden ser de tipos muy variados:
+
+- **Productos**: El ejemplo más claro que podemos citar es la tienda online de [Amazon](www.amazon.es). Cuando nos conectamos a nuestra cuenta, nos aparecerán secciones donde se nos recomiendan artículos dependiendo de nuestras preferencias (valoraciones, compras anteriores, visualizaciones …).
+
+ En la captura siguiente podemos ver como _Amazon_ nos recomienda productos que están relacionados con nuestro historial de navegación. Ellos controlan qué productos hemos visualizado y tratan de mostrarnos productos relacionados con ellos con el fin de captar nuestro interés. Recordemos que, en este contexto, captar el interés del usuario equivale a ventas, lo que a fin de cuentas es dinero.
+
+ ![Recomendaciones de Amazon](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/rec-amazon.png)
+
+- **Películas, video bajo demanda, música u otro tipo de contenido audiovisual**: Junto con el caso de Amazon suelen ser los sistemas de recomendación más usuales y con los que el usuario medio trata con asiduidad.
+
+ De hecho, empresas como [Netflix](www.netflix.com), han invertido mucho dinero y esfuerzo en desarrollar sistemas de recomendación cada vez más competentes. Recordemos el premio que impulsó la compañía y que instaba a diversos equipos a tratar de mejorar el algoritmo de recomendaciones que utilizaban [Netflix prize](https://www.netflixprize.com/). El algoritmo que se llevó el premio en la ronda final del año 2009 está descrito en este [paper](https://www.netflixprize.com/assets/GrandPrize2009_BPC_BellKor.pdf). Este algoritmo consiguió una mejora de un 10.09% (un valor de **RMSE** de 0.8558) con respecto a _Cinematch_ (que era el recomendador de referencia que usaban en _Netflix_ por entonces). Posteriormente veremos qué significa eso de **RMSE** y cómo podemos determinar que un algoritmo es mejor que otro. Como nota curiosa, _Netflix_ nunca llegó a usar el algoritmo ganador, y [aquí](https://www.wired.com/2012/04/netflix-prize-costs/) comentan algunas de las razones de ello. No sólo _Netflix_ utiliza estos sistemas, sino que empresas como _YouTube_ o _Spotify_, también sacan provecho de ellos, mostrando a sus usuarios contenido de su catálogo que puedan ser de su interés.
+
+ ![Recomendaciones de Netflix](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/rec-netflix.png)
+
+ ![Recomendaciones de Youtube](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/rec-youtube.png)
+
+- **Recomendaciones basadas en contenido / Motores de búsqueda**: Realmente, podemos llegar a ver los motores de búsqueda como sistemas recomendadores. Sin ir más lejos, si entramos en _Google_ (motor de búsqueda más conocido y utilizado en el momento de desarrollar este trabajo) y realizamos una búsqueda podemos comprobar el siguiente hecho: vamos a buscar el término ___sistemas recomendadores___ en dos pestañas diferentes: en la primera lo haremos con nuestra cuenta personal de usuario de Google y la segunda en una pestaña de incógnito. Mostramos los resultados obtenidos en las dos capturas siguientes:
+
+ ![Recomendaciones de Google con usuario](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/rec-google-user.png)
+
+ ![Recomendaciones de Google anónimas](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/rec-google-anonymous.png)
+
+ Es interesante comprobar como el resultado no es exactamente el mismo. Los enlaces aparecen en distinto orden e incluso, algunos enlaces que tenemos en las primeras páginas en un caso no aparecen en el segundo (al menos en los primeros resultados). Esto nos lleva a deducir a que _Google_ utiliza la información que dispone de nuestra cuenta de usuario (búsquedas previas, enlaces que hemos visitado, historial de navegación…) para ofrecernos los resultados de una forma más acorde a nuestras preferencias (según ha decidido su algoritmo, claro). Es evidente, que muchos enlaces sí aparecerán en el mismo orden (caso del enlace de [Wikipedia](www.wikipedia.com)) bien porque son sitios muy conocidos o bien porque entra en juego el pago que puedan hacer estos portales a _Google_ para asignarles preferencia o bien por métodos de SEO que pueden llegar a implementar.
+
+- **Recomendaciones de personas**: Quizás es un dominio un poco más controvertido, pero también podemos hablar de sistemas recomendadores en el ámbito de páginas de citas o de búsqueda de pareja. En estas páginas, normalmente, se insta al usuario a rellenar un perfil, considerando datos como aficiones, rasgos de otras personas que nos parecen más interesantes, películas que hayamos visto… con el fin de proveer al sistema de suficientes datos sobre el usuario para ofrecerle recomendaciones de otros usuarios que tengan un perfil similar, asumiendo que así es más sencillo congeniar. También podemos considerar recomendaciones de personas cuando [Facebook](www.facebook.com) te muestra perfiles bajo el epígrafe _personas que quizá conozcas_, intentando encontrar relaciones entre tu perfil y los que ya tienes agregados como amigos dentro de la plataforma con estos usuarios que te ofrecen como recomendación.
+
+### Tipos de sistemas recomendadores
+
+Anteriormente hemos estado hablado de los diferentes dominios sobre los que podemos intentar realizar recomendaciones. En este punto vamos a describir los distintos tipos de sistemas recomendadores que vamos a ir mostrando en esta y en sucesivas entradas. Estos tipos son:
+
+* **Basados en el contenido**: 
 
 ## ¿Qué es Svelte?
 
