@@ -50,7 +50,7 @@ Profundizando en los ejemplos y , dependiendo del contexto en el que nos encontr
 
 ### Tipos de sistemas recomendadores
 
-Anteriormente hemos estado hablado de los diferentes dominios sobre los que podemos intentar realizar recomendaciones. En este punto vamos a describir los distintos tipos de sistemas recomendadores que vamos a ir mostrando en esta y en sucesivas entradas. Estos tipos son:
+Anteriormente hemos estado hablado de los diferentes dominios sobre los que podemos intentar realizar recomendaciones. En este punto vamos a resumir los diferentes tipos de sistemas recomendadores que vamos a realizar a lo largo de esta serie de post. En cada entrada hablaremos sobre uno de ellos. Tenemos:
 
 * **Basados en el contenido**: En este tipo de sistemas lo que se busca es recomendarle al usuario ítems parecidos a otros que le gustó en el pasado. La clave de estos sistemas consiste en establecer en qué consiste el parecido entre ítems y como evaluar el grado de parecido entre dos ítems. Para medir la similitud se pueden utilizar diversos algoritmos y metodologías, como pueden ser, la [distancia euclídea](https://en.wikipedia.org/wiki/Euclidean_distance), el [coeficiente de correlación de Pearson](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)… Además de este cálculo de la similitud entre ítems, posteriormente el sistema tiene que establecer la predicción o recomendación, para lo cual se pueden utilizar otras técnicas como la suma ponderada de los diferentes atributos o incluso la regresión, ajustando el algoritmo según el feedback que se vaya obteniendo tras su puesta en marcha.
 
@@ -66,9 +66,11 @@ Generalmente, además, estos sistemas de recomendación se encuentran igualmente
   * **Filtrado colaborativo basada en la relación de ítems (item based collaborative filtering)**: Este caso propone darle la vuelta a lo que hemos presentado anteriormente. Se basa en la similitud entre ítems elaborada a partir de las valoraciones de los usuarios. Los ítems recomendados serán aquellos más similares a los que ya previamente hemos valorado. Este tipo de filtrado colaborativo presenta menos error que el anterior y además su rendimiento es superior, sobre todo en sistemas donde tenemos más usuarios que ítems, ya que las valoraciones de los ítems (en media) no van a cambiar tan rapidamente.
 
     ![Item based collaborative filtering](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/ib-collaborative-filtering.png)
+* **Basados en factorización de matrices**:
 
+* **Basados en redes neuronales**:
 
-
+* **Sistemas híbridos**:
 
 ## ¿Qué es Svelte?
 
