@@ -72,6 +72,51 @@ Generalmente, además, estos sistemas de recomendación se encuentran igualmente
 
 * **Sistemas híbridos**:
 
+## Nuestro sistema recomendador
+
+Una vez terminado con los preliminares, pasamos a describir lo que queremos construir. Vamos a realizar un sistema recomendador de películas, partiendo de un conjunto de datos con información de las mismas y de valoraciones realizadas por usuarios. El _dataset_ que utilizaremos se llama [MovieLens](https://grouplens.org/datasets/movielens/). De entre todas las recopilaciones que ofrecen nosotros usaremos la recomendada a fines educativos y de desarrollo. Entre estas, eligeremos la opción más pequeña de las dos que se ofrecen, donde tendremos un total de 100.000 valoraciones con 3.600 tags, aplicadas a 9.000 películas por 600 usuarios. No son números grandes (de hecho el otro _dataset_ que ofrecen presenta 27.000.000 valoraciones de 280.000 usuarios sobre 58.000 películas), pero el tiempo de proceso de nuestras pruebas va a ser mucho más reducido. De todas formas, tras la construcción de nuestro modelo, analizaremos los resultados que obtendremos y, si fuera necesario, relanzaríamos los cálculos con el _dataset_ completo.
+
+### Analizando el dataset
+
+El [dataset](http://files.grouplens.org/datasets/movielens/ml-latest-small.zip) viene comprimido en un _.zip_ y consta de los siguientes archivos:
+
+![Movielens](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/movielens.png)
+
+* **movies.csv**: Este archivo contiene la información básica de cada película en el siguiente
+formato:
+
+ ```movieId,title,geners```
+
+ donde _genres_ es una cadena con cada género separado por el caracter: _|_. En el campo _title_, entre paréntesis, se encuentra registrado el año de estreno de la película:
+
+  ![Movielens movies](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/movielens-movies.png)
+
+* **ratings.csv**: Recoge las valoraciones de los usuarios. El formato es el siguiente:
+
+ ```userId,movieId,rating,timestamp```
+
+ Las valoraciones han sido realizada usando un rango entre 0 y 5 con pasos de 0.5 puntos. Por lo tanto, irán entre 0.5 (valoración más baja) a 5 (valoración más alta). Por su parte, el _timestamp_ representan los segundos desde medianoche a partir del 1 de Enero de 1970 en [UTC](https://en.wikipedia.org/wiki/Coordinated_Universal_Time).
+
+   ![Movielens movies](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/movielens-movies.png)
+
+* **tags.csv**: Este fichero recoge _tags_ introducidos por los usuarios para ciertas películas. Estos _tags_ son palabras o pequeñas frases de libre introducción por los usuarios. En algunso casos son nombres de actores, en otros algún aspecto característicos de la película en cuestión... El formato del fichero es el siguiente:
+
+ ```userId,movieId,tag,timestamp```
+
+ El significado de timestamp es el mismo que en el caso anterior.
+
+   ![Movielens movies](/assets/images/posts/2019-10-08-hablamos-de-sistemas-recomendadores(1)/movielens-tags.png)
+
+* **links.csv**: El formato del archivo es:
+
+ ```movieId,imdbId,tmbdId```
+
+ En este caso se nos relaciona los identificadores de las películas dentro del _dataset_ con los identificadores en páginas de referencia sobre información de películas, a saber: [imbdb](https://www.imdb.com/) y [the movie database](https://www.themoviedb.org). Estas referencias podemos usarlas para ampliar la base de conocimiento de cada película, como veremos en el siguiente apartado.
+
+### Ampliando la base de conocimiento
+
+
+
 ## ¿Qué es Svelte?
 
 Según su [propia página web](https://svelte.dev) _Svelte_ es un framework orientado a componentes que nos ayuda a implementar nuestros interfaces de usuario. ¿Entonces, qué nos aporta con respecto a los que hemos nombrado anteriormente? En este caso el enfoque a la hora de realizar esta tarea es lo que va a marcar la diferencia. En los casos conocidos (_React_, _Vue_ o _Angular_) se nos anima a desarrollar código declarativo que, posteriormente, exige un trabajo extra al navegador para interpretarlo. Igualmente, exigen introducir en los archivos que servimos al compilador la librería correspondiente que estemos utilizando. _Svelte_, por el contrario, introduce una etapa de compilación que va a transformar nuestro código declarativo en un código imperativo con diversas optimizaciones. Además, evita introducir mecanismos como **_Virtua DOM_** para realizar las modificaciones en el DOM de la página; sino que, utilizando este proceso de compilación con sus optimizaciones, puede determinar en tiempo de compilación qué va a cambiar en un determinado componente y generar el código más adecuado que permita realizar estos cambios. ¿Entonces es más rápido o eficiente que _React_, _Vue_ y compañía? ¿Las aplicaciones ocupan menos peso?. Trataremos de verlo en los siguientes apartados.
