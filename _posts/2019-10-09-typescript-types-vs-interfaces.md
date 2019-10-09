@@ -22,33 +22,33 @@ Veamos algunas diferencias con código:
 
 1. Los tipos pueden declararse como tipos primitivos, uniones o tuplas mientras que las interfaces no.
 
-![diferencia 1](/assets/images/posts/2019-10-04-typescript-types-vs-interfaces/diff-1.png)
+![diferencia 1](/assets/images/posts/2019-10-09-typescript-types-vs-interfaces/diff-1.png)
 
 
 2.  Se tarda menos en escribir un tipo que una interfaz.
 
-![diferencia 2](/assets/images/posts/2019-10-04-typescript-types-vs-interfaces/diff-2.png)
+![diferencia 2](/assets/images/posts/2019-10-09-typescript-types-vs-interfaces/diff-2.png)
 
 
 3. Los tipos pueden crear interseccion con otros tipos, mientras que las interfaces no.
 
-![diferencia 3](/assets/images/posts/2019-10-04-typescript-types-vs-interfaces/diff-3.png)
+![diferencia 3](/assets/images/posts/2019-10-09-typescript-types-vs-interfaces/diff-3.png)
 
 4. La unión en la declaración de una interfaz no funciona con los tipos.
 
-![diferencia 4](/assets/images/posts/2019-10-04-typescript-types-vs-interfaces/diff-4.gif)
+![diferencia 4](/assets/images/posts/2019-10-09-typescript-types-vs-interfaces/diff-4.gif)
 
 5. No puedes extender una interfaz con un tipo si se usa el operador unión en su definición de tipo.
 
-![diferencia 5](/assets/images/posts/2019-10-04-typescript-types-vs-interfaces/diff-5.gif)
+![diferencia 5](/assets/images/posts/2019-10-09-typescript-types-vs-interfaces/diff-5.gif)
 
 6. La palabra clave **in** puede usarse para iterar sobre todos los elementos en una unión de claves. Podemos utilizar esta función para generar mapped types. Con interfaces no se puede.
 
-![diferencia 6](/assets/images/posts/2019-10-04-typescript-types-vs-interfaces/diff-6.gif)
+![diferencia 6](/assets/images/posts/2019-10-09-typescript-types-vs-interfaces/diff-6.gif)
 
 7. La sintaxis para **implementar** una clase con un tipo o con una interfaz es la misma. Pero la sintaxis para **extender** una clase no.
 
-![diferencia 7](/assets/images/posts/2019-10-04-typescript-types-vs-interfaces/diff-7.png)
+![diferencia 7](/assets/images/posts/2019-10-09-typescript-types-vs-interfaces/diff-7.png)
 
 ## Conclusión
 
