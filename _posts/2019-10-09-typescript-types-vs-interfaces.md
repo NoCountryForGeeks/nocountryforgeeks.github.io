@@ -16,7 +16,7 @@ author: anuez
 
 Debido a las requisitos del proyecto en el que se encuentra un servidor, ⚛️ [React](https://es.reactjs.org/) con Typescript para la SPA, me he visto obligado a programar en este lenguaje y me han surgido una serie de preguntas respecto a la utilización de **alias de tipos e interfaces** que me gustaría compartir.
 
-Los tipos y las interfaces han evolucionado a lo largo de las versiones y actualmente son muy similares, aunque todavía mantienen unas pequeñas diferencias: las interfaces son más **__"extensibles"__** debido a la posibilidad de unir sus declaraciones, y los tipos son más __**"componibles"**__ debido a la posibilidad de unir los tipos. 💥
+Los tipos y las interfaces han evolucionado a lo largo de las versiones y actualmente son muy similares, aunque todavía mantienen unas pequeñas diferencias: las interfaces son más ***"extensibles"*** debido a la posibilidad de unir sus declaraciones, y los tipos son más ***"componibles"*** debido a la posibilidad de unir los tipos. 💥
 
 Veamos algunas diferencias con código:
 
