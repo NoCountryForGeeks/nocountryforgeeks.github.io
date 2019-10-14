@@ -10,7 +10,6 @@ class: post-template
 subclass: 'post'
 author: anuez
 ---
-## Typescript: types 🆚 interfaces
 
 [Typescript](http://www.typescriptlang.org/) , es un "superset" del lenguaje Javascript cuyo objetivo es esencialmente añadir un tipado estático. Es un lenguaje en actual evolución, actualmente en la versión 3.6,  amado y odiado en partes iguales por los programadores, pero de esta guerra no vamos a hablar por el momento.
 
