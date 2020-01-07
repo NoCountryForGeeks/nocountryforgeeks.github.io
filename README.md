@@ -20,7 +20,7 @@
 
 **Note:** you can build the site with draft using `--draft`. 
 
-`bundle exec jekyll serve --draft -d _site`
+`bundle exec jekyll serve -d _site`
 
 ### Create Author
 

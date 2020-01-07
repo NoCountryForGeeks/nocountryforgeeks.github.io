@@ -457,3 +457,5 @@ El servidor es necesario para meter sistema de autenticación mas flexible usand
 Con esto termino por hoy, en el próximo post veremos como crear un servidor en **node** con **graphql-yoga** y como consumir el cliente generado por **Prisma** para poder consumirlo desde nuestros clientes.
 
 El repositorio **Github** lo puedes encontrar [Aquí](https://github.com/NoCountryForGeeks/prisma-with-graphql-yoga-server/tree/post-1-setup-prisma)
+
+[Aquí](/segunda-parte-contruye-un-server-graphql-con-prisma) puedes continuar con la segunda parte del post.
