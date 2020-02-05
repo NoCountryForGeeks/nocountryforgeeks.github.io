@@ -300,7 +300,7 @@ Por si no lo recordabais, a nuestro conector **prisma** lo configuramos con un *
 
 Con la parte del servidor añadida, la foto de la arquitectura de nuestro servicio sería la siguiente:
 
-![service arquitecture](/assets/images/posts/2020-01-07-segunda-parte-contruye-un-server-graphql-con-prisma/prismaArquitecture.png)
+![service arquitecture](/assets/images/posts/2020-01-07-segunda-parte-contruye-un-server-graphql-con-prisma/prismaArquitecture.PNG)
 
 ## Resumen
 
