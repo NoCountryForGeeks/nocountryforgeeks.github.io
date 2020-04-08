@@ -71,9 +71,9 @@ El acceso al objeto **this** en JavaScript depende del entorno, usando `window` 
 
 La especificación ECMA no decía en que orden podía ejecutarse la sentencia for-in. Aunque los navegadores habían estandarizado un orden previamente, ahora es oficialmente standard con ES2020.
 
-##Operador Nullish Coalescing
+## Operador Nullish Coalescing
 
-Este operador **??** es un operador lógico muy parecido al operador OR **||** con la salvedad de que **??** solo comprueba verdaderos valores nulos como son null y undefined, mientras que los valores falsos como son 0, false o NaN ejecutarían la segunda parte de la sentencia.  
+Este operador **??** es un operador lógico muy parecido al operador *+OR** con la salvedad de que **??** solo comprueba verdaderos valores nulos como son null y undefined, mientras que los valores falsos como son 0, false o NaN ejecutarían la segunda parte de la sentencia.  
 
 ![nullish-coalescing](/assets/images/posts/2020-04-08-es2020-new-features/nullishCoalesce.png)
 
