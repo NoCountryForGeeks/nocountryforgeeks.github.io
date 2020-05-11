@@ -12,7 +12,7 @@ author: danimart1991
 
 [***Raspberry Pi***](https://www.raspberrypi.org/) (en todas sus versiones) es uno de los micro-ordenadores más potentes y versátiles del momento. Gracias a la comunidad se puede conseguir casi cualquier cosa, y hoy, vamos a ver como convertirlo en una potente cámara de seguridad que nada tiene que envidiar a las disponibles en el mercado a precios mucho más altos.
 
-> Available in English [here](https://www.danielmartingonzalez.com/security-camera-with-raspberry-pi/).
+> Available in English [here](https://www.danielmartingonzalez.com/en/security-camera-with-raspberry-pi/).
 
 ## Materiales
 

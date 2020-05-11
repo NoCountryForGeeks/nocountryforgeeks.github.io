@@ -15,7 +15,7 @@ author: danimart1991
 
 A su vez, gracias a una asociación con [*Let's Encrypt*](https://letsencrypt.org/) de [*Internet Security Research Group (ISRG)*](https://www.abetterinternet.org/), se ofrece una encriptación *HTTPS* totalmente gratuita que incluye además, una red de distribución de contenido (*CDN*) respaldados por [*Cloudfare*](https://www.cloudflare.com/). Podrás conseguir tener un sitio web estático escalable, redundante, rápido y con una encriptación segura.
 
-> Available in English [here](https://www.danielmartingonzalez.com/custom-secure-domains-with-github-pages/).
+> Available in English [here](https://www.danielmartingonzalez.com/en/custom-secure-domains-with-github-pages/).
 
 Desde la propia configuración del repositorio de *GitHub* se ofrecen las opciones para configurar el sitio de manera sencilla. Basta con indicar la rama desde la que se va a desplegar el sitio web, activar la opción "*Enforce HTTPS*", y si así lo deseamos un dominio personalizado (que previamente deberemos comprar en nuestro proveedor de dominios y configurar para que redireccione a nuestro sitio web de *GitHub Pages*).
 

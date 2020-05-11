@@ -13,7 +13,7 @@ author: danimart1991
 
 Hace unos días aprendí una valiosa lección acerca de lo que hay que hacer y no en bases de datos. Unos pequeños *tips* que nos ayudarán a optimizar nuestras bases de datos **SQL Server** y con ello a realizar consultas de manera más rápida.
 
-> Available in English [here](https://www.danielmartingonzalez.com/tips-to-improve-sql-server-databases/)
+> Available in English [here](https://www.danielmartingonzalez.com/en/tips-to-improve-sql-server-databases/)
 
 ## Nunca uses palabras reservadas
 

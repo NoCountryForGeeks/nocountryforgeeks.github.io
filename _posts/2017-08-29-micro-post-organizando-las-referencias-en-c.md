@@ -13,7 +13,7 @@ author: danimart1991
 
 Hay muchas formas de mejorar nuestro código, algunas personas abogan por tener un código con una funcionalidad concreta y fiable, otros por un código limpio, y por qué no, otros simplemente por un código que funcione y punto.
 
-> Available in English [here](https://www.danielmartingonzalez.com/micro-post-organizing-the-references-in-your-classes/).
+> Available in English [here](https://www.danielmartingonzalez.com/en/micro-post-organizing-the-references-in-c/).
 
 En **No Country For Geeks** creemos que el código tiene que ser arte, y no nos referimos a un cuadro abstracto que cada persona interprete de una manera; hablamos de una sinfonía en el que cada variable, cada método, cada línea, sea un compuesto de funcionalidad, belleza, simpleza y elegancia que alcancen la excelencia en lo posible.
 

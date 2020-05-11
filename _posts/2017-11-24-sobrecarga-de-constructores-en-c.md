@@ -17,7 +17,7 @@ Todos conocemos las ventajas de la sobrecarga de métodos en nuestro código.
 
 Esto ofrece flexibilidad a la hora de llamar a un método usando un número diferente de parámetros sin por ello, tener que replicar código.
 
-> Available in English [here](https://www.danielmartingonzalez.com/constructor-overloading-in-csharp/)
+> Available in English [here](https://www.danielmartingonzalez.com/en/constructor-overloading-in-csharp/)
 
 Por ejemplo:
 

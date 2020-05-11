@@ -17,7 +17,7 @@ Admitamos algo, el ser humano es vago por excelencia, pero los informáticos lo 
 
 Podemos extrapolar esta frase a nuestro hogar. ¿Cuántas veces se nos ha olvidado una luz encendida? ¿cuántas hemos perdido el mando a distancia? ¿y si nos vamos unos días de casa y nos entran a robar?
 
-> Available in English [here](https://www.danielmartingonzalez.com/domotizing-our-house-with-home-assistant/).
+> Available in English [here](https://www.danielmartingonzalez.com/en/domotizing-our-house-with-home-assistant/).
 
 Solucionar todos estos "problemas" es más accesible hoy en día que nunca, pero si empezamos a comprar "cacharros", nos encontraríamos con un móvil repleto de aplicaciones de terceros, y muchos servicios con peligro de [ser espiados](https://www.xataka.com/privacidad/amazon-admite-que-conserva-algunos-algunos-datos-alexa-forma-indefinida-incluso-usuario-elimina-grabacion-voz) o que en algún momento [dejen de dar ese servicio](https://www.xataka.com/seguridad/quedarse-encerrado-calefaccion-imprevisibles-consecuencias-apagon-google-casa-conectada), y con ninguna interconexión entre todos los sistemas.
 
